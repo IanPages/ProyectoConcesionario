@@ -1,11 +1,11 @@
 <header>
   <div class="left">
-    <h1 [routerLink]="['/']"><a>Flex-Car</a></h1>
+    <h1 [routerLink]="['']"><a>Second-Car</a></h1>
   </div>
   <nav class="right">
     <ul>
-      <li [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"><a>Home</a></li>
-      <li [routerLink]="['/sobre']" routerLinkActive="active-link"><a>Sobre Nosotros</a></li>
+      <li [routerLink]="['']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"><a>Home</a></li>
+      <li [routerLink]="['/about']" routerLinkActive="active-link"><a>Sobre Nosotros</a></li>
       <li [routerLink]="['/coches']" routerLinkActive="active-link"><a>Coches</a></li>
       <li [routerLink]="['/contacto']" routerLinkActive="active-link"><a>Contacto</a></li>
     </ul>
@@ -17,24 +17,42 @@
 <router-outlet></router-outlet>
 
 
-<!--<div class="container">
-  <footer class="mt-5">
-    <div class="row">
+<footer class="mt-5">
+  <div class="container">
+    <div class="row justify-content-center">
       <div class="col-md-6">
-        <h5>Opciones</h5>
-        <ul class="list-unstyled">
-          <li><a href="/home">Home</a></li>
-          <li><a href="/about">Sobre Nosotros</a></li>
-          <li><a href="/cars">Coches</a></li>
-          <li><a href="/contact">Contacto</a></li>
-        </ul>
+        <div class="d-flex flex-column align-items-center">
+          <br>
+          <h5>Menú</h5>
+          <ul class="list-unstyled">
+            <li><a href="/">Home</a></li><br>
+            <li><a href="/about">Sobre Nosotros</a></li><br>
+            <li><a href="/coches">Coches</a></li><br>
+            <li><a href="/contacto">Contacto</a></li><br>
+          </ul>
+        </div>
       </div>
       <div class="col-md-6">
-        <h5>Números de Teléfono</h5>
-        <p>123-456-789</p>
-        <p>987-654-321</p>
-        <p>555-123-456</p>
+        <div class="d-flex flex-column align-items-center">
+          <h5>Números de Teléfono</h5>
+          <div class="d-flex align-items-center"> <!-- Nuevo div con clase d-flex y align-items-center -->
+            <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
+            <p class="num">123-456-789</p>
+          </div><br>
+          <div class="d-flex align-items-center"> <!-- Nuevo div con clase d-flex y align-items-center -->
+            <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
+            <p class="num">123-456-789</p>
+          </div><br>
+          <div class="d-flex align-items-center"> <!-- Nuevo div con clase d-flex y align-items-center -->
+            <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
+            <p class="num">123-456-789</p>
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
-</div>-->
+  </div>
+  <br>
+  <p style="text-align: center;">Ian Pagés Rodríguez</p><br>
+</footer>
+
+

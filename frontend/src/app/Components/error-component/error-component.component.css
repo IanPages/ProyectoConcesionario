@@ -1,0 +1,15 @@
+.boton{
+    background-color: black;
+    width: 130px;
+    color: white;
+    border-radius: 2em;
+    transition: all 1s;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: none;
+
+  }
+  .boton:hover{
+    transform: scale(1.2);
+  }

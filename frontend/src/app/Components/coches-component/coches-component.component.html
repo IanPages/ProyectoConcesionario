@@ -1,0 +1,29 @@
+<div class="general">
+    <div class="container text-center">
+        <br>
+        <h1>Coches en Stock</h1>
+        <p>Aquí podrá ver y consultar todos los coches que están disponibles actualmente en nuestro concesionario. Si desea una información más detallada no dude de contactar con nosotros en la pestaña de contacto.</p>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+           <!-- <div class="col-md-4">a</div>
+            <div class="col-md-4">a</div>
+            <div class="col-md-4">a</div>
+            <div class="col-md-4">a</div>
+            //ESTO ME PERMITE TENER 3 DIV POR LINEA, EL CUARTO YA VA EN LA SIGUIENTE LINEA-->
+            <div class="coches col-md-4 " *ngFor="let coche of data">
+               <div class="foto text-center">Foto</div>
+               <div><p id="modelo">{{coche.modelo}}</p>
+                <p id="tipo_combustible">Combustible: {{coche.tipo_combustible}}</p>
+                <p id="año">Año: {{coche.a_salida}}</p>
+                <p id="km">KM: {{coche.kilometraje}}</p>
+                <p id="precio">{{coche.precio}}€</p>
+            </div>
+            </div>
+        </div>
+        
+
+    </div>
+    
+</div>

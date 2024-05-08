@@ -8,10 +8,18 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponentComponent } from './Components/home-component/home-component.component';
 import { ErrorComponentComponent } from './Components/error-component/error-component.component';
+import { SobreNosotrosComponentComponent } from './Components/sobre-nosotros-component/sobre-nosotros-component.component';
+import { ContactoComponentComponent } from './Components/contacto-component/contacto-component.component';
+import { ApiDatosService } from './Services/api-datos.service';
+import { CochesComponentComponent } from './Components/coches-component/coches-component.component';
 
 const appRoutes:Routes=[
   {path: '',component:HomeComponentComponent},
+  {path: 'about',component:SobreNosotrosComponentComponent},
+  {path:'contacto', component:ContactoComponentComponent},
+  {path:'coches',component:CochesComponentComponent},
   {path: '**',component:ErrorComponentComponent},
+  
 ];
 
 
@@ -19,7 +27,10 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     HomeComponentComponent,
-    ErrorComponentComponent
+    ErrorComponentComponent,
+    SobreNosotrosComponentComponent,
+    ContactoComponentComponent,
+    CochesComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +39,7 @@ const appRoutes:Routes=[
     FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ApiDatosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

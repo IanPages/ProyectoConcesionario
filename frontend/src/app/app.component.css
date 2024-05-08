@@ -10,13 +10,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: rgb(141, 106, 159);
+  background-color: #000;
 }
 
 .left h1 {
   margin: 0;
   margin-left: 50px;
   cursor: pointer;
+  color: white;
 }
 hr {
   border: none;
@@ -48,18 +49,49 @@ nav ul li:hover{
 nav ul li a {
   cursor: pointer;
   text-decoration: none;
+  color: white
 }
-/*footer{
+footer{
   position: relative;
   bottom: 0px;
   width: 100%;
   left: 0px;
-  background-color: rgb(141, 106, 159);
-}*/
+  background-color: #000;
+}
+footer *{
+  color: white;
+}
 .active-link {
   transition: all 1s;
-  color: white;
+  color: yellow;
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
+}
+footer {
+  background-color: #000; /* Color de fondo opcional */
+}
+
+.container {
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+.col-md-6 {
+  text-align: center; /* Centramos el contenido horizontalmente */
+}
+
+.col-md-6:first-child {
+  margin-bottom: 20px; /* Ajustamos el espacio entre las columnas */
+}
+
+.col-md-6:last-child {
+  margin-top: 20px; /* Ajustamos el espacio entre las columnas */
+}
+.tlf{
+  height: 40px;
+  
+}
+.num{
+  line-height: 35px;
+  margin-bottom: 1px;
 }

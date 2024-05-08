@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <!-- Columna izquierda -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              
+                <h3>Contacto</h3>
+                <p><strong>Rellene los campos para ponernos en contacto con usted.</strong></p>
+                <p>Se le contactará con la mayor brevedad posible sobre el mensaje indicado por usted y le atenderemos con un correo electrónico con la información solicitada.
+                    <br><br>También no dude en visitarnos si quiere que le atendamos en el mismo momento en la calle xxxxxxxx.
+                </p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <!-- Aquí va tu iframe de Google Maps -->
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12248.295592812833!2d-74.0066438317687!3d40.6892491440848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25903ce155677%3A0xbcf672bdde15b1d9!2sStatue%20of%20Liberty!5e0!3m2!1sen!2sus!4v1630504063142!5m2!1sen!2sus"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Columna derecha -->
+        <div class="col-md-6 align-items-center justify-content-center">
+            <div class="formulario-container text-center">
+                <form>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control input-custom" [(ngModel)]="cuadroNombre"><br>
+                    <input type="email" name="correo" id="correo" placeholder="Correo Electrónico" class="form-control input-custom" [(ngModel)]="cuadroCorreo"><br> 
+                    <input type="text" name="titulo" id="titulo" placeholder="Titulo" class="form-control input-custom" [(ngModel)]="cuadroTitulo"><br>
+                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje" class="form-control input-custom" rows="5" [(ngModel)]="cuadroMensaje"></textarea><br>
+                    <button type="submit" class=" boton2 input-custom" (click)="enviarFormulario()">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

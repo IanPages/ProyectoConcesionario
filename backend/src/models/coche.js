@@ -21,6 +21,9 @@ export const Coche = sequelize.define('coches', {
     },
     kilometraje:{
         type: DataTypes.INTEGER
+    },
+    imagen:{
+        type:DataTypes.STRING
     }
 
 },{

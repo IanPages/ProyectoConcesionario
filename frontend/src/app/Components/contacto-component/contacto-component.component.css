@@ -1,0 +1,40 @@
+.container{
+    margin-top: 5%;
+    
+}
+
+.formulario-container {
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo del formulario según tus necesidades */
+    text-align: center;
+    margin-left: 15%;
+    padding: 2%;
+
+}
+.input-custom{
+    width: 150%;
+}
+.boton2{
+    background-color: #D1C8C1;
+    border-radius: 2em;
+    border: 2px solid black;
+    color: black;
+    font-style: italic;
+    transition: all 1s;
+}
+.boton2:hover {
+    background-color: #FFF5ED;
+}
+
+input,textarea{
+    outline: none;
+    background-color: #D1C8C1;
+}
+::placeholder{
+    color: black;
+    font-style: italic;
+}
+input:focus,textarea:focus{
+    outline: none;
+    background-color: #D1C8C1;   
+}

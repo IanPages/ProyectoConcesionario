@@ -26,13 +26,14 @@ export const getCoche = async (req,res) => {
 
 export const createCoche = async (req,res) => {
     try {
-        const{modelo,a_salida,precio,tipo_combustible,kilometraje,marcaId,categoriaId} = req.body;
+        const{modelo,a_salida,precio,tipo_combustible,kilometraje,imagen,marcaId,categoriaId} = req.body;
         const newCoche = await Coche.create({
             modelo,
             a_salida,
             precio,
             tipo_combustible,
             kilometraje,
+            imagen,
             marcaId,
             categoriaId
         });
@@ -46,7 +47,7 @@ export const createCoche = async (req,res) => {
 export const updateCoche = async (req,res) => {
     try {
         const {id} = req.params;
-        const{modelo,a_salida,precio,tipo_combustible,kilometraje,marcaId,categoriaId} = req.body;
+        const{modelo,a_salida,precio,tipo_combustible,kilometraje,imagen,marcaId,categoriaId} = req.body;
         const coche = await Coche.findOne({
             where: {id}
         });
@@ -55,6 +56,7 @@ export const updateCoche = async (req,res) => {
         coche.precio=precio
         coche.tipo_combustible=tipo_combustible
         coche.kilometraje=kilometraje
+        coche.imagen=imagen
         coche.marcaId=marcaId
         coche.categoriaId=categoriaId
         await coche.save();

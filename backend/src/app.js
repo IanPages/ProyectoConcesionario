@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 
 
 //importar las rutas de las tablas/funcionalidades
@@ -9,7 +10,7 @@ import formularioRoutes from './routes/formulario.routes.js';
 
 const app = express();
 
-
+app.use(cors());
 //middleware
 app.use(express.json());
 

@@ -1,0 +1,47 @@
+h1{
+    font-style: italic;
+    font-weight: bold;
+}
+*{
+    
+}
+#modelo{
+text-align: center;
+}
+#año{
+width: 50%;
+float: right;
+text-align: right;
+}
+#precio{
+position: relative;
+text-align: center;
+background-color: #D1C8C1;
+font-weight: bold;
+font-style: italic;
+width: 35%;
+align-items: center;
+justify-content: center;
+margin: auto;
+border:1px solid black;
+border-radius: 1em;
+bottom:5px;
+}
+#tipo_combustible{
+text-align: center;
+}
+#km{
+width: 50%;
+}
+.coches{
+    width: 31.3%;
+    border: 1px solid black;
+   background-color: #F5F6F6;
+   margin: 1%;
+   border-radius: 10px;
+}
+.foto{
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0;
+}
