@@ -3,7 +3,7 @@ h1{
     font-weight: bold;
 }
 *{
-    
+
 }
 #modelo{
 text-align: center;
@@ -44,4 +44,8 @@ width: 50%;
     border-bottom: 1px solid black;
     width: 100%;
     margin: 0;
+}
+.general{
+  background-color: #D1CAC5;
+  margin:0px;
 }

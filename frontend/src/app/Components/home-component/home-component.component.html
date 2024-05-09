@@ -1,29 +1,49 @@
-<div class="general">
-  <div class="container">
-    <div class="row">
-      <!-- Columna izquierda -->
-      <div class="col-md-6">
-        <div class="text-center">
-          <h3>Second-Car</h3>
-          <p>Un Concesionario de segunda mano donde podrás adquirir una gran cantidad de coches de segunda mano con gran cantidad de kilometraje, especificaciones y condiciones que se ajusten a tus necesidades.</p>
-          <br><button class="boton" [routerLink]="['/coches']">Catalogo</button>
-        </div>
+
+  <div class="general">
+    <div class="banner">
+      <div class="img-banner">
+        <img  src="../../../assets/imagenes/32c363e910893559d658acf64584fe2c00f58fa9.jpg">
+        <div class="superposicion"></div>
       </div>
-  <br>
-      <!-- Columna derecha -->
-      <div class="col-md-6">
-        <div class="embed-responsive embed-responsive-16by9">
-          <!-- Aquí va tu iframe de Google Maps -->
-          <br><iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12248.295592812833!2d-74.0066438317687!3d40.6892491440848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25903ce155677%3A0xbcf672bdde15b1d9!2sStatue%20of%20Liberty!5e0!3m2!1sen!2sus!4v1630504063142!5m2!1sen!2sus"></iframe>
-        </div>
+      <div  class="text-center bannertexto justify-content-center align-items-center">
+        <h3>Second-Car</h3><br>
+        <p id="textolargo">Un Concesionario de segunda mano donde podrás adquirir una gran cantidad de coches de segunda mano <br>con gran cantidad de kilometraje,especificaciones y condiciones que se ajusten a tus necesidades.</p>
+        <br><button class="boton" [routerLink]="['/coches']">Catálogo</button>
+      </div>
+    </div><br>
+    <div class="partners">
+      <h2 style="text-align: center;">Nuestras marcas colaboradoras</h2>
+      <br>
+      <br><br>
+      <div class="cajon d-flex justify-content-center align-items-center">
+        <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c46e.png" alt="BMW"></div>
+        <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c49e.png" alt=""></div>
+        <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c4a5.png" alt=""></div>
+        <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/580b585b2edbce24c47b2c18.png" alt=""></div>
+        <div class="fotos-colaborador"><img id="fotoford" src="../../../assets/imagenes/logos/580b585b2edbce24c47b2c67.png" alt=""></div>
+        <div class="fotos-colaborador"><img  src="../../../assets/imagenes/logos/580b585b2edbce24c47b2cac.png" alt=""></div>
+        <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/Dacia-logo.png" alt=""></div>
+        <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/e51a19da654bcb869f5aded9b9ab6e98.png" alt=""></div>
       </div>
     </div>
+
+    <div class="preguntas justify-content-center align-items-center">
+      <br><br>
+        <h5>No dudes en contactar con nosotros llamando al</h5>
+        <h4 id="numero">922 233 233</h4>
+        <p>L-V: de 8:30 a 17:00<br>
+          S-D: de 10:00 a 14:00</p>
+        <h5>O contactar con nosotros a través de</h5>
+        <br><button class="boton" [routerLink]="['/contacto']">Contacto</button>
+    </div>
+    <div class="fotos-home d-flex justify-content-center align-items-center">
+      <img class="foto1-home" src="../../../assets/imagenes/concesionario2.jpg">
+    </div>
+
+
+    <br>
   </div>
-  <br><br>
-  <div class="fotos-home d-flex justify-content-center align-items-center">
-    <img class="foto1-home" src="../../../assets/imagenes/concesionario2.jpg">
-  </div>
-</div>
+
 
 
 

@@ -1,9 +1,7 @@
 *{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(23, 15, 17);
-}
-body{
-  background-color: rgb(246, 232, 234);
+
 }
 header {
   display: flex;
@@ -11,7 +9,11 @@ header {
   align-items: center;
   padding: 20px;
   background-color: #000;
+  margin-bottom: 0px;
+
+
 }
+
 
 .left h1 {
   margin: 0;
@@ -50,17 +52,17 @@ nav ul li a {
   cursor: pointer;
   text-decoration: none;
   color: white
+}footer *{
+  color: white;
 }
 footer{
   position: relative;
-  bottom: 0px;
   width: 100%;
-  left: 0px;
+  bottom: 0px;
+  margin-top: 0px;
   background-color: #000;
 }
-footer *{
-  color: white;
-}
+
 .active-link {
   transition: all 1s;
   color: yellow;
@@ -68,10 +70,6 @@ footer *{
   padding: 5px;
   border-radius: 5px;
 }
-footer {
-  background-color: #000; /* Color de fondo opcional */
-}
-
 .container {
   max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
 }
@@ -89,9 +87,10 @@ footer {
 }
 .tlf{
   height: 40px;
-  
+
 }
 .num{
   line-height: 35px;
   margin-bottom: 1px;
 }
+

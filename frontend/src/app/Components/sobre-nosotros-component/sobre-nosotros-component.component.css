@@ -3,3 +3,68 @@
     padding: 20px;
     margin-left: 20%;
 }
+h3{
+  font-weight: bold;
+}
+#numero{
+  text-align: center;
+    font-weight: bold;
+    color: #86654B;
+  }
+.general{
+  background-color: #D1CAC5;
+  margin:0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.preguntas{
+  text-align: center;
+}
+.boton {
+  background-color: #B4A599;
+  width: 130px;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all 1s;
+  border: none;
+}
+.cajon{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:80px 40px;
+  background-color: #B4A599;
+  border-radius: 20px;
+  height: 130px;
+  width: 100%;
+  position: relative;
+  right: 3%;
+  margin-top: 0;
+  margin-bottom: 5%;
+
+}
+.fotos-colaborador img{
+  height: 100px;
+}
+#fotoford{
+  padding-top: 10px;
+  height: 70px;
+
+}
+.boton:hover {
+  transform: scale(1.2);
+}
+#textolargo{
+  word-spacing: 5px;
+}
+.seg-column{
+  margin-top: 3%;
+}
+
+.colabo{
+ text-align: center;
+
+}
