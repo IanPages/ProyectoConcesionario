@@ -15,7 +15,7 @@ export class CochesComponentComponent implements OnInit{
   data:any[]=[];
 
   constructor(private datosService:ApiDatosService,private router:Router,private route:ActivatedRoute){}
-  
+
   ngOnInit(): void {
     this.llamarCoches();
   }
@@ -25,5 +25,5 @@ export class CochesComponentComponent implements OnInit{
     });
   }
 
-  
+
 }

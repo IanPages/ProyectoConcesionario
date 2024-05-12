@@ -1,0 +1,58 @@
+
+.general{
+  background-color: #D1CAC5;
+  margin:0px;
+}
+.general img{
+  height: 300px;
+}
+.img{
+  padding-top: 2%;
+}
+.cuadroPrecios{
+  /*BUSCAR FOTO PARA UN BACKGROUND IMG DEL CUADRO*/
+ /* background-image: url('../../../assets/imagenes/Pngtreeshadowdecorativeborderblackoverlay7597173.png');
+  background-size: 100% 100%;*/
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.precio{
+  font-size: large;
+
+}
+.valor{
+  font-size: larger;
+  font-weight: bold;
+}
+.preguntas{
+  margin-bottom: 3%;
+    text-align: center;
+}
+#numero{
+    text-align: center;
+      font-weight: bold;
+      color: #86654B;
+}
+.boton {
+  background-color: #B4A599;
+  width: 130px;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all 1s;
+  border: none;
+}
+
+.boton:hover {
+  transform: scale(1.2);
+}
+.pago{
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 10px;
+}
+.al{
+  margin-top: 5%;
+  text-align: center;
+}

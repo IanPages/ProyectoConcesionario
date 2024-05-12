@@ -7,11 +7,13 @@ h1{
 }
 #modelo{
 text-align: center;
+font-weight: bold;
 }
 #año{
 width: 50%;
 float: right;
 text-align: right;
+font-weight: bold;
 }
 #precio{
 position: relative;
@@ -20,18 +22,30 @@ background-color: #D1C8C1;
 font-weight: bold;
 font-style: italic;
 width: 35%;
-align-items: center;
-justify-content: center;
-margin: auto;
+float: left;
 border:1px solid black;
 border-radius: 1em;
 bottom:5px;
 }
+#alquiler{
+  position: relative;
+  text-align: center;
+  background-color: #D1C8C1;
+  font-weight: bold;
+  font-style: italic;
+  width: 35%;
+  float: right;
+  border:1px solid black;
+  border-radius: 1em;
+  bottom:5px;
+  }
 #tipo_combustible{
 text-align: center;
+font-weight: bold;
 }
 #km{
 width: 50%;
+font-weight: bold;
 }
 .coches{
     width: 31.3%;
@@ -39,11 +53,17 @@ width: 50%;
    background-color: #F5F6F6;
    margin: 1%;
    border-radius: 10px;
+   transition: all 0.5s;
 }
-.foto{
-    border-bottom: 1px solid black;
-    width: 100%;
+.coches:hover{
+  box-shadow: 0px 0px 7px 3px black;
+}
+.foto img{
+    border: 1px solid black;
+    height: 180px;
+    width: 90%;
     margin: 0;
+    margin-top: 1%;
 }
 .general{
   background-color: #D1CAC5;

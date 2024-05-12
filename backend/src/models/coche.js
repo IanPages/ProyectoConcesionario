@@ -16,6 +16,9 @@ export const Coche = sequelize.define('coches', {
     precio: {
         type: DataTypes.DECIMAL(10,2)//hasta 10 cifras y 2 decimales
     },
+    precioalquiler:{
+        type: DataTypes.DECIMAL(10,2)
+    },
     tipo_combustible:{
         type: DataTypes.STRING
     },

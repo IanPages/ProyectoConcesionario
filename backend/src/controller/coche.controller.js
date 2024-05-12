@@ -24,13 +24,18 @@ export const getCoche = async (req,res) => {
 
 };
 
+
+//const rutasfotos = '../images/nomimg.png'
+//const fotillos= './images/noimg.png'
+
 export const createCoche = async (req,res) => {
     try {
-        const{modelo,a_salida,precio,tipo_combustible,kilometraje,imagen,marcaId,categoriaId} = req.body;
+        const{modelo,a_salida,precio,precioalquiler,tipo_combustible,kilometraje,imagen,marcaId,categoriaId} = req.body;
         const newCoche = await Coche.create({
             modelo,
             a_salida,
             precio,
+            precioalquiler,
             tipo_combustible,
             kilometraje,
             imagen,
@@ -47,13 +52,14 @@ export const createCoche = async (req,res) => {
 export const updateCoche = async (req,res) => {
     try {
         const {id} = req.params;
-        const{modelo,a_salida,precio,tipo_combustible,kilometraje,imagen,marcaId,categoriaId} = req.body;
+        const{modelo,a_salida,precio,precioalquiler,tipo_combustible,kilometraje,imagen,marcaId,categoriaId} = req.body;
         const coche = await Coche.findOne({
             where: {id}
         });
         coche.modelo=modelo
         coche.a_salida=a_salida
         coche.precio=precio
+        coche.precioalquiler=precioalquiler
         coche.tipo_combustible=tipo_combustible
         coche.kilometraje=kilometraje
         coche.imagen=imagen
@@ -66,6 +72,7 @@ export const updateCoche = async (req,res) => {
     }
 
 };
+
 //AÑADIR marcaId y categoriaId
 export const deleteCoche = async (req,res) => {
     try {

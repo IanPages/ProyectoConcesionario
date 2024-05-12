@@ -1,0 +1,48 @@
+.general {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D1CAC5;
+  height: 50vh;
+}
+
+.form {
+  background-color: #B4A599;
+  width: 25%;
+  padding: 20px;
+  border-radius: 2em;
+  position: relative;
+}
+.form h4 {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+.form input{
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+  height: 50px;
+
+}
+input::placeholder{
+  color: black;
+
+  font-weight: bold;
+}
+.form button {
+  display: block;/*Centramos boton*/
+  margin: 0 auto;
+}
+
+.loginboton {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.5s;
+}
+.loginboton:hover{
+  box-shadow: 0px 0px 15px 5px;
+}

@@ -12,14 +12,18 @@ import { SobreNosotrosComponentComponent } from './Components/sobre-nosotros-com
 import { ContactoComponentComponent } from './Components/contacto-component/contacto-component.component';
 import { ApiDatosService } from './Services/api-datos.service';
 import { CochesComponentComponent } from './Components/coches-component/coches-component.component';
+import { LoginComponentComponent } from './Components/login-component/login-component.component';
+import { CocheEspecificoComponentComponent } from './Components/coche-especifico-component/coche-especifico-component.component';
 
 const appRoutes:Routes=[
   {path: '',component:HomeComponentComponent},
   {path: 'about',component:SobreNosotrosComponentComponent},
   {path:'contacto', component:ContactoComponentComponent},
   {path:'coches',component:CochesComponentComponent},
+  {path:'coche/:id',component:CocheEspecificoComponentComponent},
+  {path:'login', component:LoginComponentComponent},
   {path: '**',component:ErrorComponentComponent},
-  
+
 ];
 
 
@@ -30,7 +34,9 @@ const appRoutes:Routes=[
     ErrorComponentComponent,
     SobreNosotrosComponentComponent,
     ContactoComponentComponent,
-    CochesComponentComponent
+    CochesComponentComponent,
+    LoginComponentComponent,
+    CocheEspecificoComponentComponent
   ],
   imports: [
     BrowserModule,

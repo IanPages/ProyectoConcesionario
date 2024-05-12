@@ -1,0 +1,70 @@
+<div class="general">
+  <div class="img d-flex justify-content-center align-items-center">
+    <img [src]="cuadroImagen" alt="Coche">
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6   flex-column align-items-center">
+        <h3 style="text-align: center;">{{cuadroModelo}}</h3>
+        <br>
+        <div class=" precio row mt-3">
+          <div class="col-md-4">
+            <p><strong>Año de salida:</strong><br><br> &nbsp;&nbsp;&nbsp;<span id="numero">{{ cuadroA_Salida }}</span></p>
+          </div>
+          <div class="col-md-4">
+            <p><strong>Tipo de combustible:</strong><br><br> &nbsp;&nbsp;&nbsp;<span id="numero">{{ cuadroTipo_Combustible }}</span></p>
+          </div>
+          <div class="col-md-4">
+            <p><strong>Kilometraje:</strong><br><br> &nbsp;&nbsp;&nbsp;<span id="numero"> {{ cuadroKilometraje }} KM</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="cuadroPrecios col-md-6 d-flex flex-column justify-content-center align-items-center ">
+        <!-- Precio de compra -->
+        <div class="text-center">
+          <p><span class="precio">Precio de Compra: </span>&nbsp;&nbsp;&nbsp; <span class="valor">{{cuadroPrecio}}€</span></p>
+        </div>
+        <!-- Precio de alquiler -->
+        <div class="text-center">
+          <p><span class="precio">Precio de Alquiler (Día):</span>&nbsp;&nbsp;&nbsp; <span class="valor">{{cuadroPrecioAlquiler}}€</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="preguntas col-md-6">
+        <br><br>
+        <h5>No dudes en contactar con nosotros llamando al</h5>
+        <h4 id="numero">922 233 233</h4>
+        <p>L-V: de 8:30 a 17:00<br>
+          S-D: de 10:00 a 14:00</p>
+        <h5>O contactar con nosotros a través de</h5>
+        <br><button class="boton" [routerLink]="['/contacto']">Contacto</button>
+      </div>
+      <div class="pago col-md-6">
+        <p>*Falta añadir metodo pago*</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="al col-md-6">
+        <h5>No olvides que también puedes visitarnos<br> si deseas ver el coche que deseas físicamente en la tienda.</h5><br>
+          <p><strong>Calle xxxxxx, Número xx</strong></p>
+         <p><strong> L-V: de 8:30 a 17:00<br>
+            S-D: de 10:00 a 14:00</strong>
+         </p>
+      </div>
+      <div class="al col-md-6">
+        <div class="embed-responsive embed-responsive-16by9" >
+          <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12248.295592812833!2d-74.0066438317687!3d40.6892491440848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25903ce155677%3A0xbcf672bdde15b1d9!2sStatue%20of%20Liberty!5e0!3m2!1sen!2sus!4v1630504063142!5m2!1sen!2sus"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

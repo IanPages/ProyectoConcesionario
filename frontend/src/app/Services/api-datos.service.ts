@@ -24,4 +24,11 @@ export class ApiDatosService {
       throw error;
     }));
   }
+
+  cargarCoche(indice:number):Observable<any>{
+    return this.http.get<any>('http://localhost:4000/coches/'+ indice).pipe(catchError(error=>{
+    console.error("Error" , error);
+    throw error;
+    }));
+  }
 }

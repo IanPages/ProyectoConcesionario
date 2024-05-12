@@ -6,6 +6,7 @@ import './models/categoria.js';
 import './models/coche.js';
 import './models/marca.js';
 import './models/formulario.js';
+import './models/user.js';
 
 async function main() {
     try {
