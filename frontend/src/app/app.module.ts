@@ -14,6 +14,7 @@ import { ApiDatosService } from './Services/api-datos.service';
 import { CochesComponentComponent } from './Components/coches-component/coches-component.component';
 import { LoginComponentComponent } from './Components/login-component/login-component.component';
 import { CocheEspecificoComponentComponent } from './Components/coche-especifico-component/coche-especifico-component.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 const appRoutes:Routes=[
   {path: '',component:HomeComponentComponent},
@@ -43,7 +44,8 @@ const appRoutes:Routes=[
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgxPayPalModule
   ],
   providers: [ApiDatosService],
   bootstrap: [AppComponent]

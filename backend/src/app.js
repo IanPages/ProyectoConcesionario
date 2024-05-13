@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import path from 'path';
 
 
 
@@ -12,10 +13,10 @@ import categoriaRoutes from './routes/categoria.routes.js';
 import formularioRoutes from './routes/formulario.routes.js';
 import userRoutes from './routes/user.routes.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const directorioImagenes= path.join('src','imagenes');
 const app = express();
 
-app.use('/images', express.static(join(__dirname, 'images')));
+app.use('/imagenes', express.static(join(directorioImagenes)));
 app.use(cors());
 //middleware
 app.use(express.json());

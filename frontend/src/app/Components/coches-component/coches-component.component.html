@@ -13,17 +13,23 @@
             <div class="col-md-4">a</div>
             //ESTO ME PERMITE TENER 3 DIV POR LINEA, EL CUARTO YA VA EN LA SIGUIENTE LINEA-->
             <div class="coches col-md-4 " *ngFor="let coche of data" [routerLink]="['/coche', coche.id]">
-               <div class="foto text-center"><img src="{{coche.imagen}}" alt="{{coche.modelo}}"></div>
-               <div><p id="modelo">{{coche.modelo}}</p>
-                <p id="tipo_combustible">Combustible: {{coche.tipo_combustible}}</p>
-                <p id="año">Año: {{coche.a_salida}}</p>
-                <p id="km">KM: {{coche.kilometraje}}</p>
+               <div class="foto text-center"><img [src]="urlImg + coche.imagen" alt="{{coche.modelo}}"></div>
+               <div class="textos">
+                <div class="gridcontainer">
+                    <div class="item1"><p id="modelo">{{coche.modelo}}</p></div>
+                    <div class="item2">
+                        <p id="tipo_combustible">Combustible: {{coche.tipo_combustible}}</p><br><br>
+                        <p id="año">Año: {{coche.a_salida}}</p><br><br>
+                        <p id="km">KM: {{coche.kilometraje}}</p>
+                    </div>
+                </div>
+                <br>
                 <p id="precio">{{coche.precio}}€</p>
                 <p id="alquiler">{{coche.precioalquiler}}€/dia</p>
-            </div>
-            </div>
+                </div>
         </div>
-
+        
+      </div>
 
     </div>
 

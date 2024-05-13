@@ -1,15 +1,8 @@
 import {User} from '../models/user.js';
+import bcrypt from 'bcrypt';
+import jsonwebtoken from 'jsonwebtoken';
 
-
-export const getUsers = async (req,res) => {
-    try {
-        const users =await User.findAll();
-        res.json(users);
-    } catch (error) {
-        return res.status(500).json({message: error.message});
-    }
-
-};
+const secretKey= "JWT_PASS";
 
 export const getUser = async (req,res) => {
     try {
@@ -26,46 +19,80 @@ export const getUser = async (req,res) => {
     }
 
 };
-
-export const createUser = async (req,res) => {
+export const loginUser = async (req,res,next) =>{
     const {email,password} = req.body;
-    try {
-        const newUser = await User.create({
-            email,
-            password
+    User.findOne({
+        where: {email}
+    })
+    .then(user =>{
+        if(user.length < 1){
+            return res.status(401).json({
+                message: 'Autenticación fallida'
+            });
+        }
+        bcrypt.compare(password, user.password, (err, result) =>{
+            if (err){
+                return res.status(401).json({
+                    message: 'Autenticación fallida'
+                });
+            }
+            if(result){
+               const token = jsonwebtoken.sign({
+                    email: user.email,
+                    id: user.id
+                }, 
+                secretKey,
+                {
+                    expiresIn: "1h"
+                } 
+                );
+                return res.status(200).json({
+                    message: 'Autenticación correcta',
+                    token: token
+                });
+            }
+            return res.status(401).json({
+                message: 'Autenticación fallida'
+            });
         });
-        res.json(newUser);
-    } catch (error) {
-        return res.status(500).json({message: error.message});
-    }
-
-};
-
-export const updateUser = async (req,res) => {
-    
-    try {
-        const {id} = req.params; 
-        const {email,password} =req.body;
-        const user = await User.findByPk(id);
-        user.email=email
-        user.password=password
-        await user.save();
-        res.json(user);
-    } catch (error) {
-        return res.status(500).json({message: error.message});
-    }
-
-};
-
-export const deleteUser = async (req,res) => {
-    try {
-        const {id} = req.params;
-        await User.destroy({
-            where:{id}
+        
+    })
+    .catch(err =>{
+        console.log(err);
+        res.status(500).json({
+            error: err
         });
-        res.sendStatus(204);
-    } catch (error) {
-        return res.status(500).json({message: error.message});
-    }
-
+    })
 };
+
+export const createUser = async (req,res,next) => {
+    bcrypt.hash(req.body.password,10,(err,hash) =>{
+        if(err){
+            return res.status(500).json({
+                error: err
+            });
+        }
+        else{
+            const user = new User({
+        email: req.body.email,
+        password: hash
+        });
+        user.save()
+        .then(result =>{
+            console.log(result);
+            res.status(201).json({
+                message: 'Usuario Creado'
+            });
+        })
+        .catch(err =>{
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+         
+        }
+    });
+};
+
+

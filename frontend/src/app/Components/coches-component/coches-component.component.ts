@@ -15,7 +15,7 @@ export class CochesComponentComponent implements OnInit{
   data:any[]=[];
 
   constructor(private datosService:ApiDatosService,private router:Router,private route:ActivatedRoute){}
-
+  urlImg:string="http://localhost:4000/imagenes/";
   ngOnInit(): void {
     this.llamarCoches();
   }
