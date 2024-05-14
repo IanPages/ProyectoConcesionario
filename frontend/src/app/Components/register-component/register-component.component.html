@@ -2,12 +2,12 @@
   <div class="form ">
     <form (submit)="onSubmit()">
       <h4>Register</h4><br>
-      <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail"><br><br><br>
+      <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail" required><br><br><br>
       <input type="text" name="contraseña" id="contraseña" placeholder="Password" [(ngModel)]="cuadroPassword" required minlength="6" #passwordInput><br><br><br>
       <p *ngIf="passwordInput.value && passwordInput.value.length < 6">La contraseña debe tener almenos 6 caracteres.</p>
 
 
-      <button type="submit" class="loginboton">Register</button><!--(click)-->
+      <button type="submit" class="loginboton" [disabled]="passwordInput.value && passwordInput.value.length < 6">Register</button><!--(click)-->
     </form>
   </div>
 </div>
