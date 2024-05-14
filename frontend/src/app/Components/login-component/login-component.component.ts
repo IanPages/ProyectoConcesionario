@@ -11,6 +11,7 @@ export class LoginComponentComponent implements OnInit {
 
   cuadroEmail:string="";
   cuadroPassword:string="";
+  errorMessage:String="";
 
   constructor(private datosService:ApiDatosService,private router:Router){}
 
@@ -25,6 +26,12 @@ export class LoginComponentComponent implements OnInit {
       this.router.navigate(['']);
     },
     error=>{
+      if(error.status===401){
+        this.errorMessage='Credenciales Incorrectas';
+      }
+      else{
+        this.errorMessage='Error al iniciar sesión. Intentalo de nuevo.';
+      }
       console.log('Error en el login:', error.message);
     });
   }

@@ -66,6 +66,7 @@ export const loginUser = async (req,res,next) =>{
 };
 
 export const createUser = async (req,res,next) => {
+    
     bcrypt.hash(req.body.password,10,(err,hash) =>{
         if(err){
             return res.status(500).json({
