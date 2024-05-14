@@ -8,7 +8,9 @@
       <li [routerLink]="['/about']" routerLinkActive="active-link"><a>Sobre Nosotros</a></li>
       <li [routerLink]="['/coches']" routerLinkActive="active-link"><a>Coches</a></li>
       <li [routerLink]="['/contacto']" routerLinkActive="active-link"><a>Contacto</a></li>
-      <li [routerLink]="['/login']" routerLinkActive="active-link"><a>Login</a></li>
+      <li routerLinkActive="active-link" *ngIf="isLoggedIn()"><a (click)="logout()">Logout</a></li>
+      <li [routerLink]="['/login']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a>Login</a></li>
+      <li [routerLink]="['/signup']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a>Register</a></li>
     </ul>
   </nav>
 
@@ -31,7 +33,9 @@
             <li><a href="/about">Sobre Nosotros</a></li><br>
             <li><a href="/coches">Coches</a></li><br>
             <li><a href="/contacto">Contacto</a></li><br>
-            <li><a href="/login">Login</a></li><br>
+            <li *ngIf="isLoggedIn()"><a href="/"(click)="logout()">Logout</a></li>
+            <li *ngIf="!isLoggedIn()"><a href="/login">Login</a></li><br>
+            <li *ngIf="!isLoggedIn()"><a href="/signup">Register</a></li>
           </ul>
         </div>
       </div>

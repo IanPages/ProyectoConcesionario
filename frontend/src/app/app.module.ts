@@ -15,6 +15,8 @@ import { CochesComponentComponent } from './Components/coches-component/coches-c
 import { LoginComponentComponent } from './Components/login-component/login-component.component';
 import { CocheEspecificoComponentComponent } from './Components/coche-especifico-component/coche-especifico-component.component';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { SuccessfulPaymentComponentComponent } from './Components/successful-payment-component/successful-payment-component.component';
+import { RegisterComponentComponent } from './Components/register-component/register-component.component';
 
 const appRoutes:Routes=[
   {path: '',component:HomeComponentComponent},
@@ -23,6 +25,8 @@ const appRoutes:Routes=[
   {path:'coches',component:CochesComponentComponent},
   {path:'coche/:id',component:CocheEspecificoComponentComponent},
   {path:'login', component:LoginComponentComponent},
+  {path:'signup', component:RegisterComponentComponent},
+  {path:'successfulpayment', component:SuccessfulPaymentComponentComponent},
   {path: '**',component:ErrorComponentComponent},
 
 ];
@@ -37,7 +41,9 @@ const appRoutes:Routes=[
     ContactoComponentComponent,
     CochesComponentComponent,
     LoginComponentComponent,
-    CocheEspecificoComponentComponent
+    CocheEspecificoComponentComponent,
+    SuccessfulPaymentComponentComponent,
+    RegisterComponentComponent
   ],
   imports: [
     BrowserModule,

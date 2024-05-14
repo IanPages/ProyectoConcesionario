@@ -31,4 +31,21 @@ export class ApiDatosService {
     throw error;
     }));
   }
+
+  loginUser(email:string,password:string){
+    return this.http.post<any>('http://localhost:4000/login', {email,password});
+  }
+
+  registerUser(email:string,password:string){
+    return this.http.post<any>('http://localhost:4000/signup', {email,password});
+  }
+
+  isLogged(): boolean{
+    return localStorage.getItem('token') !== null;
+  }
+
+  logout(): void {
+    localStorage.removeItem('token');
+  }
+
 }

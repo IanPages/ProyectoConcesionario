@@ -9,19 +9,26 @@
           </div>
         </div>
         <div class="pago col-md-6">
-          <h3>Método Pago</h3>
-          <ngx-paypal #payPalElem1 [config]="payPalConfig"></ngx-paypal> 
+          <div *ngIf="isLoggedIn()">
+            <h3>Método Pago</h3>
+          <ngx-paypal #payPalElem1 [config]="payPalConfig"></ngx-paypal>
+          </div>
+          <div *ngIf="!isLoggedIn()">
+            <h3>Para realizar la compra de este vehículo,<br> inicie sesión primero</h3><br>
+            <button class="boton" [routerLink]="['/login']">Inicio Sesión</button>
+          </div>
+
           <!--<h5>Alquier:</h5>
           <ngx-paypal #payPalElem2 [config]="payPalConfigAlquiler"></ngx-paypal>-->
         </div>
       </div>
     </div>
-    
-      
+
+
   <br>
-  
+
 <br>
-  
+
   <div class="container">
     <div class=" row ">
       <div class="col-md-6   flex-column align-items-center">
@@ -45,13 +52,13 @@
           <div class="text-center">
             <p><span class="precio">Compra desde: </span>&nbsp;&nbsp;&nbsp; <span class="valor">&nbsp;{{cuadroPrecio}}€&nbsp;</span></p>
           </div>
-        
+
           <div class="text-center">
             <p><span class="precio">Alquiler desde:</span>&nbsp;&nbsp;&nbsp; <span class="valor">&nbsp;{{cuadroPrecioAlquiler}}€&nbsp;</span></p>
           </div>
         </div>
       </div>
-      
+
     </div>
   </div>
   <br>

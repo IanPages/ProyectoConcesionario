@@ -52,22 +52,22 @@ font-weight: bold;
     width: 31.3%;
     border: 1px solid black;
     /*background-color: #DBDBDB;*/
-    background-image: linear-gradient(to bottom left, #FEF9CF, #FCC251);
-    
+    background-image: linear-gradient(to bottom left, #e1e2e8, #b6b8c7);
+
    margin: 1%;
    padding: 1%;
-   border-radius: 10px; 
+   border-radius: 10px;
    transition: all 0.8s ;
-  
+
    cursor: pointer;
 
 }
 .coches:hover{
-  background-image: linear-gradient(to top right, #FEF9CF, #FCC251);
-  box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.5), 
-  -10px 0 10px -5px rgba(0, 0, 0, 0.5), 
-  0 10px 10px -5px rgba(0, 0, 0, 0.5), 
-  0 -10px 10px -5px rgba(0, 0, 0, 0.5); 
+  background-image: linear-gradient(to top right, #e1e2e8, #b6b8c7);
+  box-shadow: 10px 0 20px -5px rgba(0, 0, 0, 0.75),
+  -10px 0 10px -5px rgba(0, 0, 0, 0.75),
+  0 10px 10px -5px rgba(0, 0, 0, 0.75),
+  0 -10px 10px -5px rgba(0, 0, 0, 0.75);
   transform: scale(1.05);
 
 }
@@ -80,7 +80,7 @@ font-weight: bold;
     border: 1px solid black;
     height: 220px;
     width: 100%;
-   
+
     margin-top: 1%;
     border-radius: 10px;
     position: relative;

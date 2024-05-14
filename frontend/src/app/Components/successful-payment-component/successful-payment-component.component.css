@@ -1,0 +1,36 @@
+.general{
+  background-color: #D1CAC5;
+  margin:0px;
+}
+.preguntas{
+
+  text-align: center;
+}
+#numero{
+  text-align: center;
+    font-weight: bold;
+    color: #86654B;
+}
+.boton {
+  background-color: #B4A599;
+  width: 130px;
+  height: 30px;
+  color: black;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all 1s;
+  border: none;
+  margin-bottom: 2%;
+}
+
+.boton:hover {
+  transform: scale(1.2);
+}
+.compra{
+  text-align: center;
+}
+.tcompra{
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
