@@ -11,9 +11,9 @@ import { ActivatedRoute,Router } from '@angular/router';
 export class ContactoComponentComponent implements OnInit{
 
   constructor(private router:Router,private route:ActivatedRoute,private datosService:ApiDatosService){}
-  
+
   ngOnInit(): void {
-    
+
   }
 
   enviarFormulario(){
@@ -23,6 +23,7 @@ export class ContactoComponentComponent implements OnInit{
     this.cuadroCorreo="";
     this.cuadroTitulo="";
     this.cuadroMensaje="";
+    alert('El mensaje ha sido enviado, el personal se pondrá en contacto contigo pronto.');
     this.router.navigate(['/contacto']);
 
   }
