@@ -134,7 +134,7 @@ _JSON_
 }
  ```
  
-* No olvidar añadir la imagen descrita en "imagen" sobre la carpeta /src/imagenes
+* No olvidar añadir la imagen descrita en "imagen" sobre la carpeta /src/imagenes, ya que si no, no se verán las fotos de los coches en el front en el apartado coches.
 
 
 # Modificación Coche
