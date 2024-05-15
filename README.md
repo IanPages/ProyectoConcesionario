@@ -112,7 +112,8 @@ _JSON_
   "imagen": "audia1sb2018frontview.png",
   "marcaId": 4,
   "categoriaId": 2
-} ```
+}
+ ```
  
 * No olvidar añadir la imagen descrita en "imagen" sobre la carpeta /src/imagenes
 
@@ -125,7 +126,8 @@ Para la modificación enviaremos un PUT sobre el id del coche /coches/"id" y esc
 _JSON_
 ``` {
   "kilometraje": 12000
-} ```  
+}
+```  
 
 
 # Eliminación Coche
@@ -143,7 +145,8 @@ _JSON_
 ``` {
   "email": "intento@intento.com",
   "password": "Intento84+"
-} ```
+}
+```
 
 En el frontend deberia de salir un resultado tal que así.  
 
@@ -159,7 +162,8 @@ _JSON_
 ```{
   "email": "intento@intento.com",
   "password": "Intento84+"
-} ```
+}
+```
 
 En el frontend debería de salir un resultado tal que así.  
 
