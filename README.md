@@ -87,5 +87,6 @@ En el frontend debería de salir un resultado tal que así.
 --imgloginusuarioenfrontend
 
 
-**Aclaración**
+## Aclaración
+
 No se ha podido hacer un docker sobre el backend debido a problemas relacionados con bcrypt que no han hecho posible la creación del docker como tal para el backend y su funcionamiento.
