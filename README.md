@@ -21,7 +21,8 @@ Nos metemos en el contenedor del mysql para importar la base de datos.
  `docker exec -it mysqlbase mysql -u root -p`   
  (En la password escribiremos 1234)  
 
- ```CREATE DATABASE concesionario;
+ ```
+CREATE DATABASE concesionario;
  USE concesionario;
  source /concesionario.sql;
  exit;
@@ -102,7 +103,8 @@ Para la creación de coche ejecutaremos un POST a /coches con todas las columnas
 --imgcreacióncoche  
 
 _JSON_
-``` {
+```
+{
   "modelo": "Audi A1",
   "a_salida": 2012,
   "precio": "38250.00",
@@ -124,7 +126,8 @@ Para la modificación enviaremos un PUT sobre el id del coche /coches/"id" y esc
 --imgedicióncoche  
 
 _JSON_
-``` {
+```
+ {
   "kilometraje": 12000
 }
 ```  
@@ -142,7 +145,8 @@ Para el registro del usuario enviaremos un POST sobre /signup con las columnas d
 --imgcreacionususario  
 
 _JSON_
-``` {
+```
+{
   "email": "intento@intento.com",
   "password": "Intento84+"
 }
@@ -159,7 +163,8 @@ Para el login del usuario enviaremos un POST sobre /login con los datos del usua
 --imgloginusuario
 
 _JSON_
-```{
+```
+{
   "email": "intento@intento.com",
   "password": "Intento84+"
 }
