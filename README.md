@@ -12,7 +12,7 @@ Después crearemos el contenedor de mysql con la sintaxis en cmd:
 
 Y descargaremos esta base de datos que ya contiene algunos datos para que se pueda ver. (Posteriormente explicaré como insertar datos,...)
 
-[link al drive con el .sql](https://drive.google.com/file/d/1ARo3Fijuy7A1u36-jCvtkCfIHG0_6ur6/view?usp=sharing)
+[Descarga de la base de datos .sql](https://drive.google.com/file/d/1ARo3Fijuy7A1u36-jCvtkCfIHG0_6ur6/view?usp=sharing)
 
 Después nos situaremos en el directorio donde tenemos el .sql y abriremos el cmd sobre el directorio:    
  
