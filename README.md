@@ -7,6 +7,7 @@ Para comenzar, clonaremos todo el repositorio en nuestro dispositivo local para 
  --dockermysqlimg--
  
 Después crearemos el contenedor de mysql con la sintaxis en cmd:  
+
   `docker run --name mysqlbase -e MYSQL_ROOT_PASSWORD=1234 -p 3306:3306 -d mysql:latest`
 
 Y descargaremos esta base de datos que ya contiene algunos datos para que se pueda ver. (Posteriormente explicaré como insertar datos,...)
@@ -14,6 +15,7 @@ link al drive con el .sql
 Después nos situaremos en el directorio donde tenemos el .sql y abriremos el cmd sobre el directorio:    
  
   `docker cp concesionario.sql mysqlbase:/concesionario.sql`  
+  
 Nos metemos en el contenedor del mysql para importar la base de datos.    
 
  `docker exec -it mysqlbase mysql -u root -p`   
