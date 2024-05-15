@@ -4,7 +4,7 @@ Para comenzar, clonaremos todo el repositorio en nuestro dispositivo local para 
  ## Preparación del docker de la base de datos.
  
  Para ello primero tendremos que coger la última imagen de mysql:  
- --dockermysqlimg--
+![IMG](imagenesREADME/dockermysqlimg.png)
  
 Después crearemos el contenedor de mysql con la sintaxis en cmd:  
 
