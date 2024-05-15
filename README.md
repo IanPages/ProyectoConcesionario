@@ -1,4 +1,4 @@
-![image](https://github.com/IanPages/ProyectoConcesionario/assets/114249985/40908cf5-d6f7-4310-bec8-7fa6f9f69c3a)# ProyectoConcesionario
+# ProyectoConcesionario
 Para comenzar, clonaremos todo el repositorio en nuestro dispositivo local para trabajar con lo creado.
 
  ## Preparación del docker de la base de datos.
