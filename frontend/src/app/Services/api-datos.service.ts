@@ -32,6 +32,13 @@ export class ApiDatosService {
     }));
   }
 
+  borrarCoche(indice:number){
+    this.http.delete('http://localhost:4000/coches/'+ indice).subscribe(
+      response=> ("Se ha borrado el socio" + response),
+      error => ("Error" + error)
+    );
+  }
+
   loginUser(email:string,password:string){
     return this.http.post<any>('http://localhost:4000/login', {email,password});
   }

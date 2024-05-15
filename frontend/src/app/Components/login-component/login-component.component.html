@@ -2,8 +2,8 @@
   <div class="form ">
     <form (submit)="onSubmit()">
       <h4>Login</h4><br>
-      <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail"><br><br><br>
-      <input type="text" name="contraseña" id="contraseña" placeholder="Password" [(ngModel)]="cuadroPassword" required minlength="6"><br><br><br>
+      <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail" required><br><br><br>
+      <input type="password" name="contraseña" id="contraseña" placeholder="Password" [(ngModel)]="cuadroPassword" required minlength="6"><br><br><br>
       <p *ngIf="errorMessage">{{ errorMessage }}</p>
       <button type="submit" class="loginboton" >Iniciar Sesión</button><!--(click)-->
 

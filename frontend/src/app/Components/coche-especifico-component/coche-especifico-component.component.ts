@@ -51,7 +51,7 @@ export class CocheEspecificoComponentComponent implements OnInit{
     return this.datosService.isLogged();
   }
 
-
+  
   paypalconfigPago():void{
     this.payPalConfig = {
       currency: 'EUR',
@@ -96,7 +96,9 @@ export class CocheEspecificoComponentComponent implements OnInit{
         actions.order.get().then((details: any) => {
           console.log('onApprove - you can get full order details inside onApprove: ', details);
         });
+        this.datosService.borrarCoche(this.cocheId);
         this.router.navigate(['/successfulpayment']);
+        
       },
       onClientAuthorization: (data) => {
         console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
