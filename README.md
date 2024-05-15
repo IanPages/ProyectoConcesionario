@@ -19,7 +19,8 @@ Nos metemos en el contenedor del mysql para importar la base de datos.
  ```CREATE DATABASE concesionario;
  USE concesionario;
  source /concesionario.sql;
- exit;```
+ exit;
+```
 
 ## Arrancar tanto el frontend como el backend
 
@@ -27,12 +28,14 @@ Nos metemos en el contenedor del mysql para importar la base de datos.
 # Backend
 Para ello abriremos la terminal del framework que queramos, usaré el visual studio y sobre la carpeta del backend escribiremos en la terminal:
 `npm run dev`
+
 --imgdearrancadobackend
 
 
 # Frontend
 Haremos lo mismo que el caso anterior, abriremos la terminal y e inicializaremos el servicio:
 `ng serve -o`
+
 --imgdearrancadofrontend
 
 
