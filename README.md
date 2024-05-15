@@ -78,9 +78,23 @@ Para la creación enviaremos un POST a /marcas con las columas designadas en la 
 
 ![IMG](imagenesREADME/imgcreacionmarca.png)
 
+_JSON_
+```
+{
+ "nombre": "Mitsubishi"
+}
+```
+
 Y para la categoría haremos lo mismo que hicimos con la marca:
 
 ![IMG](imagenesREADME/imgcreacioncategoria.png)
+
+_JSON_
+```
+{
+ "nombre": "Categoria"
+}
+```
 
 # Borrado marca y categoria
 
