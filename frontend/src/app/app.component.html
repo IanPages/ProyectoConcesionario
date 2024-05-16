@@ -24,18 +24,27 @@
 <footer class="mt-5">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-md-6 col1">
         <div class="d-flex flex-column align-items-center">
           <br>
           <h5>Menú</h5>
           <ul class="list-unstyled">
-            <li><a href="/">Home</a></li><br>
-            <li><a href="/about">Sobre Nosotros</a></li><br>
-            <li><a href="/coches">Coches</a></li><br>
-            <li><a href="/contacto">Contacto</a></li><br>
-            <li *ngIf="isLoggedIn()"><a href="/"(click)="logout()">Logout</a></li>
-            <li *ngIf="!isLoggedIn()"><a href="/login">Login</a></li><br>
-            <li *ngIf="!isLoggedIn()"><a href="/signup">Register</a></li>
+            <div class="container">
+              <div class="row ">
+                <div class="col-md-6 ">
+                  <br>
+                  <li><a href="/">Home</a></li><br>
+                  <li><a href="/about">About</a></li><br>
+                  <li><a href="/coches">Coches</a></li>
+                </div>
+                <div class="col-md-6">
+                  <li><a href="/contacto">Contacto</a></li><br>
+                  <li *ngIf="isLoggedIn()"><a href="/"(click)="logout()">Logout</a><br></li>
+                  <li *ngIf="!isLoggedIn()"><a href="/login">Login</a></li><br>
+                  <li *ngIf="!isLoggedIn()"><a href="/signup">Register</a></li>
+                </div>
+              </div>
+            </div>
           </ul>
         </div>
       </div>
@@ -44,22 +53,16 @@
           <h5>Números de Teléfono</h5>
           <div class="d-flex align-items-center"> <!-- Nuevo div con clase d-flex y align-items-center -->
             <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
-            <p class="num">123-456-789</p>
+            <p class="num">922-233-233</p>
           </div><br>
           <div class="d-flex align-items-center"> <!-- Nuevo div con clase d-flex y align-items-center -->
             <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
-            <p class="num">123-456-789</p>
-          </div><br>
-          <div class="d-flex align-items-center"> <!-- Nuevo div con clase d-flex y align-items-center -->
-            <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
-            <p class="num">123-456-789</p>
+            <p class="num">688-234-356</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <br>
-  <p style="text-align: center;">Ian Pagés Rodríguez</p><br>
 </footer>
 
 

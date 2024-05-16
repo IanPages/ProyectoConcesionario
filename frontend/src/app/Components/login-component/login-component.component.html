@@ -5,8 +5,8 @@
       <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail" required><br><br><br>
       <input type="password" name="contraseña" id="contraseña" placeholder="Password" [(ngModel)]="cuadroPassword" required minlength="6"><br><br><br>
       <p *ngIf="errorMessage">{{ errorMessage }}</p>
-      <button type="submit" class="loginboton" >Iniciar Sesión</button><!--(click)-->
-
+      <button type="submit" class="loginboton" >Iniciar Sesión</button><!--(click)--><br>
+      <p>¿Aún no tienes cuenta? - <a [routerLink]="['/signup']">Regístrate gratis!</a></p>
     </form>
 
   </div>

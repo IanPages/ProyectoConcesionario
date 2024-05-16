@@ -35,7 +35,7 @@ h3{
 .cajon{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap:80px 40px;
+  gap:60px 30px;
   background-color: #B4A599;
   border-radius: 20px;
   height: 130px;

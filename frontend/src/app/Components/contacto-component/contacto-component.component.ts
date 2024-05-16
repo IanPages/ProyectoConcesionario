@@ -12,7 +12,14 @@ export class ContactoComponentComponent implements OnInit{
 
   constructor(private router:Router,private route:ActivatedRoute,private datosService:ApiDatosService){}
 
+  CorreoUsuario:string|null=null;
+
   ngOnInit(): void {
+    this.CorreoUsuario=localStorage.getItem('CorreoUser');
+    if(this.CorreoUsuario){
+      this.cuadroCorreo=this.CorreoUsuario;
+    }
+
 
   }
 
@@ -26,6 +33,10 @@ export class ContactoComponentComponent implements OnInit{
     alert('El mensaje ha sido enviado, el personal se pondrá en contacto contigo pronto.');
     this.router.navigate(['/contacto']);
 
+  }
+
+  isLogged():boolean{
+    return this.datosService.isLogged();
   }
   cuadroNombre:string="";
   cuadroCorreo:string="";

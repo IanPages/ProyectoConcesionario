@@ -14,7 +14,9 @@ header {
 
 }
 
-
+.col1{
+  border-right: 1px solid grey;
+}
 .left h1 {
   margin: 0;
   margin-left: 50px;

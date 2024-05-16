@@ -22,6 +22,7 @@ export class LoginComponentComponent implements OnInit {
   onSubmit(){
     this.datosService.loginUser(this.cuadroEmail,this.cuadroPassword).subscribe(data =>{
       localStorage.setItem('token',data.token);
+      localStorage.setItem('CorreoUser', this.cuadroEmail);
       console.log('Login Exitoso');
       this.router.navigate(['']);
     },

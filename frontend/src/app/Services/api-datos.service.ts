@@ -9,7 +9,7 @@ import { Observable, catchError } from 'rxjs';
 })
 export class ApiDatosService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {}
 
   guardarFormularios(formulario:any){
     this.http.post('http://localhost:4000/formularios', formulario).subscribe(
@@ -51,8 +51,12 @@ export class ApiDatosService {
     return localStorage.getItem('token') !== null;
   }
 
+  CorreoVacio:string="";
   logout(): void {
     localStorage.removeItem('token');
+    localStorage.setItem('CorreoUser',this.CorreoVacio);
   }
+
+
 
 }
