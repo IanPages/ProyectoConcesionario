@@ -11,6 +11,7 @@ export class RegisterComponentComponent implements OnInit{
 
   cuadroEmail:string="";
   cuadroPassword:string="";
+  cuadroPasswordVerificacion:string="";
 
   constructor(private datosService:ApiDatosService,private router:Router){}
 
@@ -18,14 +19,26 @@ export class RegisterComponentComponent implements OnInit{
 
   }
 
-  onSubmit(){
-    this.datosService.registerUser(this.cuadroEmail,this.cuadroPassword).subscribe(data =>{
-      console.log('Cuenta creada proceda a iniciar sesión');
-      alert('La cuenta ha sido creada.')
-      this.router.navigate(['/login']);
-    },error=>{
-      console.log('Error al crear la cuenta', error.message);
-    });
+  // onSubmit(){
+  //   this.datosService.registerUser(this.cuadroEmail,this.cuadroPassword).subscribe(data =>{
+  //     console.log('Cuenta creada proceda a iniciar sesión');
+  //     alert('La cuenta ha sido creada.')
+  //     this.router.navigate(['/login']);
+  //   },error=>{
+  //     console.log('Error al crear la cuenta', error.message);
+  //   });
+  // }
+
+  onSubmit() {
+    if (this.cuadroPassword === this.cuadroPasswordVerificacion && this.cuadroPassword.length >= 6) {
+      this.datosService.registerUser(this.cuadroEmail,this.cuadroPassword).subscribe(data =>{
+        console.log('Cuenta creada proceda a iniciar sesión');
+        alert('La cuenta ha sido creada.')
+        this.router.navigate(['/login']);
+      });
+    } else {
+      console.error('Las contraseñas no coinciden o no cumplen con los requisitos de longitud.');
+    }
   }
 
 }
