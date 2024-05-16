@@ -14,9 +14,7 @@ header {
 
 }
 
-.col1{
-  border-right: 1px solid grey;
-}
+
 .left h1 {
   margin: 0;
   margin-left: 50px;
@@ -56,6 +54,7 @@ nav ul li a {
   color: white
 }footer *{
   color: white;
+  
 }
 footer{
   position: relative;
@@ -73,7 +72,8 @@ footer{
   border-radius: 5px;
 }
 .container {
-  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  max-width: 800px;
+  margin-bottom: 0; /* Ajusta el ancho máximo según tus necesidades */
 }
 
 .col-md-6 {
@@ -85,7 +85,7 @@ footer{
 }
 
 .col-md-6:last-child {
-  margin-top: 20px; /* Ajustamos el espacio entre las columnas */
+  margin-top: 23px; /* Ajustamos el espacio entre las columnas */
 }
 .tlf{
   height: 40px;
