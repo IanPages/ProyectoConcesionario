@@ -54,7 +54,7 @@ nav ul li a {
   color: white
 }footer *{
   color: white;
-  
+
 }
 footer{
   position: relative;
@@ -72,7 +72,8 @@ footer{
   border-radius: 5px;
 }
 .container {
-  max-width: 800px;
+  position: relative;
+  width: 100%;
   margin-bottom: 0; /* Ajusta el ancho máximo según tus necesidades */
 }
 
@@ -89,10 +90,34 @@ footer{
 }
 .tlf{
   height: 40px;
-
 }
 .num{
   line-height: 35px;
   margin-bottom: 1px;
 }
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 10px; /* Espacio entre los elementos */
+}
+.listanums{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+
+}
+.numitems{
+  display: flex;
+  justify-content: center; /* Alinea horizontalmente */
+  align-items: center; /* Alinea verticalmente */
+  text-align: center;
+}
+
+.list-item {
+  list-style: none;
+  padding: 10px;
+}
+
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiDatosService } from '../../Services/api-datos.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register-component',
@@ -29,11 +30,20 @@ export class RegisterComponentComponent implements OnInit{
   //   });
   // }
 
+  alerta(){
+    Swal.fire({
+      title: '¡Register Hecho!',
+      text: 'La cuenta ha sido creada',
+      icon: 'success',
+      confirmButtonText: 'Aceptar'
+    });
+  }
+
   onSubmit() {
     if (this.cuadroPassword === this.cuadroPasswordVerificacion && this.cuadroPassword.length >= 6) {
       this.datosService.registerUser(this.cuadroEmail,this.cuadroPassword).subscribe(data =>{
         console.log('Cuenta creada proceda a iniciar sesión');
-        alert('La cuenta ha sido creada.')
+        this.alerta();
         this.router.navigate(['/login']);
       });
     } else {

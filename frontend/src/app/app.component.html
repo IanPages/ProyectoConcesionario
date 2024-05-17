@@ -21,44 +21,43 @@
 
 <script src="https://www.paypal.com/sdk/js?client-id=Ac1qKyx4gPVwlK9Ofxupgf2x0-kjfddrjuqDZq5FPAOHMT7R2H5s9qtaPrr6uJRmyFV3389NDxhaxbDT&currency=EUR"></script>
 
-<footer class="mt-5">
+
+
+<footer >
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6 col1">
-        <div class="d-flex flex-column align-items-center">
+        <div class=" flex-column align-items-center">
           <br>
           <h5>Menú</h5>
-          <ul class="list-unstyled">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6 ">
-                <br>
-                  <li><a href="/">Home</a></li><br>
-                  <li><a href="/about">About</a></li><br>
-                  <li><a href="/coches">Coches</a></li>
+              <div class="container">
+                <div class="list-container">
+                    <li class="list-item"><a href="/">Home</a></li>
+                    <li class="list-item"><a href="/about">About</a></li>
+                    <li class="list-item"><a href="/coches">Coches</a></li>
+                    <li class="list-item"><a href="/contacto">Contacto</a></li>
+                    <li class="list-item" *ngIf="isLoggedIn()"><a href="/" (click)="logout()">Logout</a></li>
+                    <li class="list-item" *ngIf="!isLoggedIn()"><a href="/login">Login</a></li>
+                    <li class="list-item" *ngIf="!isLoggedIn()"><a href="/signup">Register</a></li>
                 </div>
-                <div class="col-md-6">
-                  <li><a href="/contacto">Contacto</a></li><br>
-                  <li *ngIf="isLoggedIn()"><a href="/"(click)="logout()">Logout</a><br></li>
-                  <li *ngIf="!isLoggedIn()"><a href="/login">Login</a></li><br>
-                  <li *ngIf="!isLoggedIn()"><a href="/signup">Register</a></li>
-                </div>
-              </div>
             </div>
-          </ul>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="d-flex flex-column align-items-center">
-          <h5>Números de Teléfono</h5>
-          <div class="d-flex align-items-center"> <!-- Nuevo div con clase d-flex y align-items-center -->
-            <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
-            <p class="num">922-233-233</p>
-          </div><br>
-          <div class="d-flex align-items-center"> <!-- Nuevo div con clase d-flex y align-items-center -->
-            <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
-            <p class="num">688-234-356</p>
+        <div class=" flex-column align-items-center">
+          <h5>Números de Teléfono</h5><br>
+          <div class="listanums">
+            <div class="numitems d-flex align-items-center">
+              <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
+              <p class="num">922-233-233</p>
+            </div>
+            <div class="numitems d-flex align-items-center">
+              <img class="tlf" src="../assets/imagenes/—Pngtree—three-dimensional white phone icon free_6020287.png">
+              <p class="num">688-234-356</p>
+            </div>
           </div>
+
+
         </div>
       </div>
     </div>

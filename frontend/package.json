@@ -19,11 +19,13 @@
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@paypal/checkout-server-sdk": "^1.0.3",
+    "@sweetalert2/ngx-sweetalert2": "^12.3.0",
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1",
     "ngx-paypal": "^11.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.11.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },

@@ -17,6 +17,7 @@ import { CocheEspecificoComponentComponent } from './Components/coche-especifico
 import { NgxPayPalModule } from 'ngx-paypal';
 import { SuccessfulPaymentComponentComponent } from './Components/successful-payment-component/successful-payment-component.component';
 import { RegisterComponentComponent } from './Components/register-component/register-component.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 const appRoutes:Routes=[
   {path: '',component:HomeComponentComponent},
@@ -51,7 +52,8 @@ const appRoutes:Routes=[
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    NgxPayPalModule
+    NgxPayPalModule,
+    SweetAlert2Module
   ],
   providers: [ApiDatosService],
   bootstrap: [AppComponent]

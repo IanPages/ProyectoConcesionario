@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiDatosService } from '../../Services/api-datos.service';
 import { Router,ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login-component',
@@ -34,6 +35,15 @@ export class LoginComponentComponent implements OnInit {
         this.errorMessage='Error al iniciar sesión. Intentalo de nuevo.';
       }
       console.log('Error en el login:', error.message);
+    });
+  }
+
+  alerta(){
+    Swal.fire({
+      title: '¡Login Hecho!',
+      text: 'Ha iniciado Sesión',
+      icon: 'info',  // 'success', 'error', 'warning', 'info', 'question'
+      confirmButtonText: 'Aceptar'
     });
   }
 }

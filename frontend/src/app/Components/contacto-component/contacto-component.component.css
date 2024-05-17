@@ -5,7 +5,9 @@ h3{
 .general{
   background-color: #D1CAC5;
   margin: 0px;
-  
+  padding-top: 3%;
+  padding-bottom: 3%;
+
 }
 .formulario-container {
     width: 100%;
