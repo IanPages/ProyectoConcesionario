@@ -1,6 +1,29 @@
 # ProyectoConcesionario
 Para comenzar, clonaremos todo el repositorio en nuestro dispositivo local para trabajar con lo creado.
+# Opción 1 - Backend-DB Dockerizado
+## Preparación del Docker
 
+Para ello nos meteremos dentro de la carpeta de backend y abriremos un CMD con el directorio de nuestra carpeta de backend.
+Escribiremos lo siguiente para generar un docker para la base de datos y otro para el backend.
+
+`docker-compose up --build`
+
+Después pararemos ambos contenedores y arrancaremos primero la base de datos y después el backend para que realice la conexión sobre ella.
+
+**imgdockerbdybackend
+
+Ahora solo nos quedará por arrancar el frontend:
+
+## Frontend
+_(Puerto 4200)_
+Haremos lo mismo que el caso anterior, abriremos la terminal y e inicializaremos el servicio:  
+
+`ng serve -o`
+  
+![IMG](imagenesREADME/imgdearrancadofrontend.png)
+
+
+# Opción 2 - DB Dockerizado Y backend local
  ## Preparación del docker de la base de datos.
  
  Para ello primero tendremos que coger la última imagen de mysql:  
@@ -30,20 +53,22 @@ CREATE DATABASE concesionario;
  exit;
 ```
 
-## Arrancar tanto el frontend como el backend
+# Arrancar tanto el frontend como el backend
 
 
-# Backend
+## Backend
 _(Puerto 4000)_
 
 Para ello abriremos la terminal del framework que queramos, usaré el visual studio y sobre la carpeta del backend escribiremos en la terminal:  
+
+`npm install`
 
 `npm run dev`
   
 ![IMG](imagenesREADME/imgdearrancadobackend.png)
 
 
-# Frontend
+## Frontend
 _(Puerto 4200)_
 Haremos lo mismo que el caso anterior, abriremos la terminal y e inicializaremos el servicio:  
 
@@ -52,12 +77,12 @@ Haremos lo mismo que el caso anterior, abriremos la terminal y e inicializaremos
 ![IMG](imagenesREADME/imgdearrancadofrontend.png)
 
 
-## Manipulación de datos (Creación de coches, modificación, eliminación, Creación y eliminado de marcas y categorias, Login/Register Usuarios)
+# Manipulación de datos (Creación de coches, modificación, eliminación, Creación y eliminado de marcas y categorias, Login/Register Usuarios)
 
 Para ello podremos usar el PostMan para realizar el envío de peticiones a nuestro backend & base de datos.
 * Si hay duda sobre ello, consultar "routes" que es donde estan desarrolladas todas las funciones.
 
-# Visualización marca y categoria
+## Visualización marca y categoria
 
 Para ver todas las marcas ejecutaremos un GET a /marcas para ver todas las marcas que tengamos creadas:
 
@@ -73,7 +98,7 @@ Lo mismo podremos hacer con categoria.
 
 ![IMG](imagenesREADME/visualizacioncategoriadetallada.png)
 
-# Creación marca y categoria
+## Creación marca y categoria
 Para la creación enviaremos un POST a /marcas con las columas designadas en la base de datos:
 
 ![IMG](imagenesREADME/imgcreacionmarca.png)
@@ -96,7 +121,7 @@ _JSON_
 }
 ```
 
-# Borrado marca y categoria
+## Borrado marca y categoria
 
 Para borrar una marca o categoria enviaremos un DELETE con el /id que queramos borrar.
 
@@ -105,7 +130,7 @@ Para borrar una marca o categoria enviaremos un DELETE con el /id que queramos b
 ![IMG](imagenesREADME/imgborradomarca.png)
 
 
-# Visualización Coche
+## Visualización Coche
 Para ver todos los coches que tenemos en nuestra base de datos ejecutaremos un GET a /coches para que nos muestre todos los resultados de la base de datos:
 
 ![IMG](imagenesREADME/imgvisualizacioncoche.png)
@@ -114,7 +139,7 @@ También podemos ver un coche por un /"id" específico que queramos:
 
 ![IMG](imagenesREADME/imgvisualizacioncochedetallada.png)
 
-# Creación Coche
+## Creación Coche
 Para la creación de coche ejecutaremos un POST a /coches con todas las columnas desarrolladas en la base de datos, como sale en la imagen de referencia.  
 
 ![IMG](imagenesREADME/imgcreacioncoche.png)
@@ -128,7 +153,7 @@ _JSON_
   "precioalquiler": "46.0",
   "tipo_combustible": "Diesel",
   "kilometraje": 2500,
-  "imagen": "audia1sb2018frontview.png",
+  "imagen": "audia1sb2018frontview.jpg",
   "marcaId": 4,
   "categoriaId": 2
 }
@@ -137,7 +162,7 @@ _JSON_
 * No olvidar añadir la imagen descrita en "imagen" sobre la carpeta /src/imagenes, ya que si no, no se verán las fotos de los coches en el front en el apartado coches.
 
 
-# Modificación Coche
+## Modificación Coche
 Para la modificación enviaremos un PUT sobre el id del coche /coches/"id" y escribiremos la columna con el resultado que queramos modificar:  
 
 ![IMG](imagenesREADME/imgedicioncoche.png) 
@@ -150,13 +175,13 @@ _JSON_
 ```  
 
 
-# Eliminación Coche
+## Eliminación Coche
 Para el borrado de coche enviaremos un DELETE con el id del coche /coches/"id" y lo enviaremos, como resultado nos debe dar un "204 No Content" indicando que se ha realizado correctamente.  
 
 ![IMG](imagenesREADME/imgborradocoche.png)
 
 
-# Register User
+## Register User
 Para el registro del usuario enviaremos un POST sobre /signup con las columnas desarrolladas:  
 
 ![IMG](imagenesREADME/imgcreacionusuario.png)
@@ -174,7 +199,7 @@ En el frontend deberia de salir un resultado tal que así.
 ![IMG](imagenesREADME/imgcreacionusuarioenfront.png)
 
 
-# Login User 
+## Login User 
 Para el login del usuario enviaremos un POST sobre /login con los datos del usuario creado previamente:  
 
 ![IMG](imagenesREADME/imgloginusuario.png)
@@ -192,6 +217,4 @@ En el frontend debería de salir un resultado tal que así.
 ![IMG](imagenesREADME/imgloginusuarioenfrontend.png)
 
 
-## Aclaración
 
-No se ha podido hacer un docker sobre el backend debido a problemas relacionados con bcrypt que no han hecho posible la creación del docker como tal para el backend y su funcionamiento.
