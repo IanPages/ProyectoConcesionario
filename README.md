@@ -38,6 +38,8 @@ _(Puerto 4000)_
 
 Para ello abriremos la terminal del framework que queramos, usaré el visual studio y sobre la carpeta del backend escribiremos en la terminal:  
 
+`npm install`
+
 `npm run dev`
   
 ![IMG](imagenesREADME/imgdearrancadobackend.png)
