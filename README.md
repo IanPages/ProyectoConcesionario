@@ -23,7 +23,7 @@ Haremos lo mismo que el caso anterior, abriremos la terminal y e inicializaremos
   
 ![IMG](imagenesREADME/imgdearrancadofrontend.png)
 
-
+ __Si se hace la primera opción, no hacer la segunda__
 # Opción 2 - DB Dockerizado Y backend local
  ## Preparación del docker de la base de datos.
  
