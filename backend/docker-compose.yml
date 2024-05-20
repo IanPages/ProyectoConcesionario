@@ -1,0 +1,26 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=mysqlbase2
+      - DB_USER=root
+      - DB_PASSWORD=1234
+      - DB_NAME=concesionario
+    depends_on:
+      - mysqlbase2
+
+  mysqlbase2:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: concesionario
+    ports:
+      - "3306:3306"

@@ -1,0 +1,11 @@
+FROM node:18
+
+WORKDIR /src/index
+COPY package.json .
+RUN npm install
+RUN npm install -g nodemon
+
+EXPOSE 4000
+
+COPY . .
+CMD npm run dev
