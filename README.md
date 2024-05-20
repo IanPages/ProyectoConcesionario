@@ -1,7 +1,30 @@
 # ProyectoConcesionario
 Para comenzar, clonaremos todo el repositorio en nuestro dispositivo local para trabajar con lo creado.
+## Opción 1 - Backend-DB Dockerizado
+# Preparación del Docker
 
- ## Preparación del docker de la base de datos.
+Para ello nos meteremos dentro de la carpeta de backend y abriremos un CMD con el directorio de nuestra carpeta de backend.
+Escribiremos lo siguiente para generar un docker para la base de datos y otro para el backend.
+
+`docker-compose up --build`
+
+Después pararemos ambos contenedores y arrancaremos primero la base de datos y después el backend para que realice la conexión sobre ella.
+
+**imgdockerbdybackend
+
+Ahora solo nos quedará por arrancar el frontend:
+
+# Frontend
+_(Puerto 4200)_
+Haremos lo mismo que el caso anterior, abriremos la terminal y e inicializaremos el servicio:  
+
+`ng serve -o`
+  
+![IMG](imagenesREADME/imgdearrancadofrontend.png)
+
+
+## Opción 2 - DB Dockerizado Y backend local
+ # Preparación del docker de la base de datos.
  
  Para ello primero tendremos que coger la última imagen de mysql:  
 ![IMG](imagenesREADME/dockermysqlimg.png)
@@ -130,7 +153,7 @@ _JSON_
   "precioalquiler": "46.0",
   "tipo_combustible": "Diesel",
   "kilometraje": 2500,
-  "imagen": "audia1sb2018frontview.png",
+  "imagen": "audia1sb2018frontview.jpg",
   "marcaId": 4,
   "categoriaId": 2
 }
