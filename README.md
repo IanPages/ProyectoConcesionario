@@ -10,7 +10,8 @@ Escribiremos lo siguiente para generar un docker para la base de datos y otro pa
 
 Después pararemos ambos contenedores y arrancaremos primero la base de datos y después el backend para que realice la conexión sobre ella.
 
-**imgdockerbdybackend
+
+![IMG](imagenesREADME/imgdockerbdybackend.png)
 
 Ahora solo nos quedará por arrancar el frontend:
 
@@ -22,7 +23,7 @@ Haremos lo mismo que el caso anterior, abriremos la terminal y e inicializaremos
   
 ![IMG](imagenesREADME/imgdearrancadofrontend.png)
 
-
+ __ATENCION: Si se hace la primera opción, no hacer la segunda, ir directamente a la manipulación de datos__
 # Opción 2 - DB Dockerizado Y backend local
  ## Preparación del docker de la base de datos.
  
