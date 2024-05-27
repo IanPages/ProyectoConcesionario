@@ -1,20 +1,29 @@
-<header>
-  <div class="left">
-    <h1 [routerLink]="['']"><a>Second-Car</a></h1>
+<header class="relative  w-full bg-gray-800 text-white ">
+  <div class="w-full flex">
+    <div class="left w-50/100">
+      <h1 class="font-bold text-4xl" [routerLink]="['']"><a>Second-Car</a></h1>
+    </div>
+    <div class="items-end justify-end flex w-50/100">
+      <button class="bg-blue-500 text-white p-2 rounded" (click)="Expandir()" *ngIf="!expandido">  Expandir</button>
+      <button class="bg-red-500 text-white p-2 rounded" (click)="Cerrar()" *ngIf="expandido"><img src="" alt=""> Cerrar</button>
+    </div>
   </div>
-  <nav class="right">
-    <ul>
-      <li [routerLink]="['']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"><a>Home</a></li>
-      <li [routerLink]="['/about']" routerLinkActive="active-link"><a>Sobre Nosotros</a></li>
-      <li [routerLink]="['/coches']" routerLinkActive="active-link"><a>Coches</a></li>
-      <li [routerLink]="['/contacto']" routerLinkActive="active-link"><a>Contacto</a></li>
-      <li routerLinkActive="active-link" *ngIf="isLoggedIn()"><a (click)="logout()">Logout</a></li>
-      <li [routerLink]="['/login']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a>Login</a></li>
-      <li [routerLink]="['/signup']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a>Register</a></li>
-    </ul>
-  </nav>
-
 </header>
+
+<nav class="w-full bg-gray-800 text-white transition-all duration-500 ease-in-out" [class.hidden]="!expandido" [@slideDown]="expandido">
+  <ul class="flex flex-col items-center space-y-4 py-3 px-3">
+    <li [routerLink]="['']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"><a (click)="ClickLink()">Home</a></li>
+    <li [routerLink]="['/about']" routerLinkActive="active-link"><a (click)="ClickLink()">Sobre Nosotros</a></li>
+    <li [routerLink]="['/coches']" routerLinkActive="active-link"><a (click)="ClickLink()">Coches</a></li>
+    <li [routerLink]="['/contacto']" routerLinkActive="active-link"><a (click)="ClickLink()">Contacto</a></li>
+    <li routerLinkActive="active-link" *ngIf="isLoggedIn()"><a (click)="logout()">Logout</a></li>
+    <li [routerLink]="['/login']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a (click)="ClickLink()">Login</a></li>
+    <li [routerLink]="['/signup']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a (click)="ClickLink()">Register</a></li>
+  </ul>
+</nav>
+
+
+
 <hr>
 
 <router-outlet id="prueba"></router-outlet>

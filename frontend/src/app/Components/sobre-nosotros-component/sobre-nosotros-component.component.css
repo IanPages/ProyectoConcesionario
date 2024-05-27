@@ -1,3 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+  .fotoscob{
+    @apply
+    w-16
+    sm:w-20
+    lg:w-28
+  }
+  .centrarimg{
+    @apply justify-center items-center flex
+  }
+  .ww{
+    @apply
+    w-20
+    sm:w-28
+    lg:w-32
+  }
+  .bmw{
+    @apply
+    w-16
+    lg:w-20
+  }
+  .porsche{
+    @apply
+    w-16
+    lg:w-20
+  }
+}
+
+
+
 .fotos-about img{
     width: 400px;
     padding: 20px;

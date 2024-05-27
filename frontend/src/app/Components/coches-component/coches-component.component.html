@@ -1,17 +1,40 @@
-<div class="general">
-    <div class="container text-center">
+<div class="bg-base m-0">
+    <div class="text-center">
         <br>
-        <h1>Coches en Stock</h1>
-        <p>Aquí podrá ver y consultar todos los coches que están disponibles actualmente en nuestro concesionario. Si desea una información más detallada no dude de contactar con nosotros en la pestaña de contacto.</p>
-        <hr>
+        <h1 class="text-4xl font-bold underline m-y-2 text-center">Coches en Stock</h1><br>
+        <p class="font-bold">Aquí podrá ver y consultar todos los coches que están disponibles actualmente en nuestro concesionario. Si desea una información más detallada no dude de contactar con nosotros en la pestaña de contacto.</p>
+        
     </div>
-    <div class="container">
+<br>
+<div class="w-100/100  my-2">
+    <div class="grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 px-8 gap-5">  
+    <div *ngFor="let coche of data" class="bg-slate-400 rounded-lg space-y-1 w-full shadow-2xl" [routerLink]="['/coche', coche.id]">
+       <div class="w-full h-64 relative rounded-lg">
+         <img [src]="urlImg + coche.imagen" alt="{{coche.modelo}}" class="object-cover w-full h-60 rounded-t-lg">
+       </div>
+       <br>
+       
+       <div class="flex justify-between w-full">
+         <p class="t-izq mx-2">{{coche.modelo}}</p>
+         <div class="text-right w-50/100 mx-2">
+           <p>Año: {{coche.a_salida}}</p>
+           <p>Combustible: {{coche.tipo_combustible}}</p>
+           <p>KM: {{coche.kilometraje}}</p>
+         </div>
+       </div><br>
+       <div class="flex justify-between w-full">
+         <button class="boton">{{coche.precio}}€</button>
+         <button class="boton">{{coche.precioalquiler}}€/dia</button>
+       </div>
+       <br>
+       </div>
+    </div>
+</div>
+<br>
+
+    <!-- <div class="container">
         <div class="row">
-           <!-- <div class="col-md-4">a</div>
-            <div class="col-md-4">a</div>
-            <div class="col-md-4">a</div>
-            <div class="col-md-4">a</div>
-            //ESTO ME PERMITE TENER 3 DIV POR LINEA, EL CUARTO YA VA EN LA SIGUIENTE LINEA-->
+          
             <div class="coches col-md-4 " *ngFor="let coche of data" [routerLink]="['/coche', coche.id]">
                <div class="foto text-center"><img [src]="urlImg + coche.imagen" alt="{{coche.modelo}}"></div>
                <div class="textos">
@@ -31,6 +54,6 @@
         
       </div>
 
-    </div>
+    </div> -->
 
 </div>

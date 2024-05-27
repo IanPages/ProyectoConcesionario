@@ -10,8 +10,27 @@ import Swal from 'sweetalert2';
 })
 export class AppComponent {
   title = 'frontend';
-
+  expandido:boolean = false;
   constructor(private datosService:ApiDatosService,private router:Router){}
+  Expandir(){
+    if ( this.expandido == false)
+    this.expandido = true;
+    else
+    this.expandido = false;
+  }
+  Cerrar(){
+    this.expandido=false;
+    const navElement = document.querySelector('nav');
+  if (navElement) {
+    navElement.classList.add('cerrar');
+    setTimeout(() => {
+      navElement.classList.remove('cerrar');
+    }, 1000); 
+  }
+  }
+  ClickLink(){
+    this.expandido=false;
+  }
 
   isLoggedIn():boolean{
     return this.datosService.isLogged();

@@ -1,6 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+ 
+  .boton{
+      @apply bg-white p-2 rounded-xl font-bold shadow-sm shadow-white transition-all duration-500 hover:bg-base hover:text-white
+  }
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px; /* Cambia el valor según la altura máxima del menú */
+    opacity: 1;
+  }
+}
+
+nav {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 1000px; /* Ajusta el valor según la altura máxima del menú */
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+nav.cerrar {
+  animation: slideUp 0.5s ease-in-out;
+}
 *{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(23, 15, 17);
+ 
 
 }
 header {
@@ -43,7 +84,7 @@ nav ul li {
 }
 nav ul li:hover{
   background-color: rgb(129, 132, 121);
-  padding: 5px;
+ 
   border-radius: 5px;
   transition: all 1s;
   color: white;

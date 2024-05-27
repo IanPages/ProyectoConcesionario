@@ -1,57 +1,38 @@
-<div class="general">
-  <div class="container">
-    <div class="row justify-content-center">
-      <!-- Columna izquierda -->
-      <div class="col-md-6">
-        <div class=" justify-content-center">
-          <br><br>
-          <h3>Second-Car</h3><br>
+<div class="bg-base ">
+  <div class="grid-cols-2 md:grid mx-5 p-5">
+    <div class="text-center">
+      <h3>Second-Car</h3><br>
           <p id="textolargo"><strong>Second-Car es un nuevo concesionario de coches de segunda mano donde serán reacondicionados y preparados para una segunda vida en su buen uso.
            <br><br> Disponiendo de un abanico de opciones para que usted pueda tener el coche que desee sin ningún tipo de problemas garantizando que su funcionamiento será el adecuado y deseado.</strong></p>
-        </div>
-        <div class="preguntas justify-content-center align-items-center">
-            <br><br>
-              <h5>No dudes en contactar con nosotros llamando al</h5>
-              <h3 id="numero">922 233 233</h3>
-              <p>L-V: de 8:30 a 17:00<br>
-                S-D: de 10:00 a 14:00</p>
-              <h5>O contactar con nosotros a través de</h5>
-              <br><button class="boton" [routerLink]="['/contacto']">Contacto</button>
-        </div>
-      </div>
-
-      <!-- Columna derecha -->
-      <div class="seg-column col-md-6">
-        <div class="text-center">
-          <br><br><br>
-          <div class="embed-responsive embed-responsive-16by9" >
-            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12248.295592812833!2d-74.0066438317687!3d40.6892491440848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25903ce155677%3A0xbcf672bdde15b1d9!2sStatue%20of%20Liberty!5e0!3m2!1sen!2sus!4v1630504063142!5m2!1sen!2sus"></iframe>
-          </div>
-        </div>
-        <div class="fotos-about">
-
-          <img src="../../../assets/imagenes/Coche-del-Ano-de-la-Mujer-2.jpg" alt="Coche 2">
-      </div>
+    </div>
+    <div class="sm:mt-0 sm:mr-0 sm:pt-0 mt-5 mr-5 pt-0  text-center flex justify-center items-center mx-auto">
+      <div class="embed-responsive embed-responsive-16by9" >
+        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12248.295592812833!2d-74.0066438317687!3d40.6892491440848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25903ce155677%3A0xbcf672bdde15b1d9!2sStatue%20of%20Liberty!5e0!3m2!1sen!2sus!4v1630504063142!5m2!1sen!2sus"></iframe>
       </div>
     </div>
-    <br>
-  </div><br>
-  <div class="partners">
-    <h2 class="colabo">Nuestras marcas colaboradoras</h2>
-    <br>
-    <br>
-    <div class="cajon d-flex justify-content-center align-items-center">
-      <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c46e.png" alt="BMW"></div>
-      <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c49e.png" alt=""></div>
-      <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c4a5.png" alt=""></div>
-      <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/580b585b2edbce24c47b2c18.png" alt=""></div>
-      <div class="fotos-colaborador"><img id="fotoford" src="../../../assets/imagenes/logos/580b585b2edbce24c47b2c67.png" alt=""></div>
-      <div class="fotos-colaborador"><img  src="../../../assets/imagenes/logos/580b585b2edbce24c47b2cac.png" alt=""></div>
-      <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/Dacia-logo.png" alt=""></div>
-      <div class="fotos-colaborador"><img src="../../../assets/imagenes/logos/e51a19da654bcb869f5aded9b9ab6e98.png" alt=""></div>
+    <div class="text-center pt-5 pb-2">
+      <h5 class="font-bold">No dudes en contactar con nosotros llamando al</h5><br>
+      <h4 id="numero" class="text-3xl">922 233 233</h4><br>
+      <p class="font-bold">L-V: de 8:30 a 17:00<br>
+        S-D: de 10:00 a 14:00</p><br>
+      <h5 class="font-semibold">O contactar con nosotros a través de</h5>
+      <br><button class="boton" [routerLink]="['/contacto']">Contacto</button>
+    </div>
+    <div class="sm:mt-0 sm:mr-0 sm:pt-0 mt-5 mr-5 pt-0  w-60/100 text-center flex justify-center items-center mx-auto">
+      <img src="../../../assets/imagenes/Coche-del-Ano-de-la-Mujer-2.jpg" alt="Coche 2">
     </div>
   </div>
+
+  <p class="text-center font-bold">Nuestras marcas colaboradoras</p>
+  <div class="grid gap-5 mx-5 grid-cols-4 p-4 lg:grid-cols-8 justify-center items-center bg-img rounded-2xl">
+    <div class="centrarimg"><img class="bmw" src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c46e.png" alt="BMW"></div>
+    <div class="centrarimg"><img class="fotoscob" src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c49e.png" alt=""></div>
+    <div class="centrarimg"><img class="ww" src="../../../assets/imagenes/logos/580b57fcd9996e24bc43c4a5.png" alt=""></div>
+    <div class="centrarimg"><img class="fotoscob" src="../../../assets/imagenes/logos/580b585b2edbce24c47b2c18.png" alt=""></div>
+    <div class="centrarimg"><img class="fotoscob" src="../../../assets/imagenes/logos/580b585b2edbce24c47b2c67.png" alt=""></div>
+    <div class="centrarimg"><img class="porsche" src="../../../assets/imagenes/logos/580b585b2edbce24c47b2cac.png" alt=""></div>
+    <div class="centrarimg"><img class="fotoscob" src="../../../assets/imagenes/logos/Dacia-logo.png" alt=""></div>
+    <div class="centrarimg"><img class="fotoscob" src="../../../assets/imagenes/logos/e51a19da654bcb869f5aded9b9ab6e98.png" alt=""></div>
+  </div>
+  <br>
 </div>
-
-
-
