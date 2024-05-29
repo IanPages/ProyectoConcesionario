@@ -1,13 +1,13 @@
-<div class="general">
-  <div class="form ">
+<div class="flex justify-center items-center bg-base h-screen">
+  <div class="bg-img w-50/100 sm:w-30/100 p-6 rounded-2xl relative">
     <form (submit)="onSubmit()">
-      <h4>Login</h4><br>
-      <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail" required><br><br><br>
-      <input type="password" name="contraseña" id="contraseña" placeholder="Password" [(ngModel)]="cuadroPassword" required minlength="6"><br><br><br>
-      <p *ngIf="errorMessage">{{ errorMessage }}</p>
-      <button type="submit" class="loginboton" >Iniciar Sesión</button><!--(click)--><br>
-      <p>¿Aún no tienes cuenta? - <a [routerLink]="['/signup']">Regístrate gratis!</a></p>
+      <h4 class="text-black font-bold text-center">Login</h4><br>
+      <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail" required class="w-full rounded-lg border border-black text-center h-12 mb-8 placeholder-black placeholder-bold"><br><br><br>
+      <input type="password" name="contraseña" id="contraseña" placeholder="Password" [(ngModel)]="cuadroPassword" required minlength="6" class="w-full rounded-lg border border-black text-center h-12 mb-8 placeholder-black placeholder-bold"><br><br><br>
+      <p *ngIf="errorMessage" class="text-center">{{ errorMessage }}</p>
+      <button type="submit" class="block mx-auto text-white bg-black rounded-lg px-4 py-2 transition duration-500 hover:shadow-lg">Iniciar Sesión</button><!--(click)--><br>
+      <p class="text-center">¿Aún no tienes cuenta? - <a [routerLink]="['/signup']" class="text-blue-500">Regístrate gratis!</a></p>
     </form>
-
   </div>
 </div>
+

@@ -1,16 +1,15 @@
-<div class="general">
-  <div class="form ">
+<div class="flex justify-center items-center bg-base h-screen">
+  <div class="bg-img  p-6 rounded-2xl relative w-50/100 sm:w-30/100">
     <form (submit)="onSubmit()">
-      <h4>Register</h4><br>
-      <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail" required><br><br><br>
-      <input type="password" name="contraseña" id="contraseña" placeholder="Password" [(ngModel)]="cuadroPassword" required minlength="6" #passwordInput="ngModel"><br><br><br>
-      <input type="password" name="contraseña2" id="contraseña2" placeholder="Repite la Password" [(ngModel)]="cuadroPasswordVerificacion" required minlength="6" #passwordInput2="ngModel"><br><br><br>
-      <p *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">La contraseña debe tener al menos 6 caracteres.</p>
-      <p *ngIf="cuadroPassword !== cuadroPasswordVerificacion && (passwordInput2.dirty || passwordInput2.touched)">Las contraseñas no coinciden.</p>
-
-
-      <button type="submit" class="loginboton" [disabled]="passwordInput.invalid || cuadroPassword !== cuadroPasswordVerificacion">Register</button><br>
-      <p>Si tienes la cuenta ya, <a [routerLink]="['/login']">Logueate!</a></p>
+      <h4 class="text-black font-bold text-center">Register</h4><br>
+      <input type="text" name="email" id="email" placeholder="Correo Electrónico" [(ngModel)]="cuadroEmail" required class="w-full rounded-lg border border-black text-center h-12 mb-8 placeholder-black placeholder-bold"><br><br><br>
+      <input type="password" name="contraseña" id="contraseña" placeholder="Password" [(ngModel)]="cuadroPassword" required minlength="6" #passwordInput="ngModel" class="w-full rounded-lg border border-black text-center h-12 mb-8 placeholder-black placeholder-bold"><br><br><br>
+      <input type="password" name="contraseña2" id="contraseña2" placeholder="Repite la Password" [(ngModel)]="cuadroPasswordVerificacion" required minlength="6" #passwordInput2="ngModel" class="w-full rounded-lg border border-black text-center h-12 mb-8 placeholder-black placeholder-bold"><br><br><br>
+      <p *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)" class="text-center text-red-500">La contraseña debe tener al menos 6 caracteres.</p>
+      <p *ngIf="cuadroPassword !== cuadroPasswordVerificacion && (passwordInput2.dirty || passwordInput2.touched)" class="text-center text-red-500">Las contraseñas no coinciden.</p>
+      <button type="submit" class="block mx-auto text-white bg-black rounded-lg px-4 py-2 transition duration-500 hover:shadow-lg" [disabled]="passwordInput.invalid || cuadroPassword !== cuadroPasswordVerificacion">Register</button><br>
+      <p class="text-center">Si tienes la cuenta ya, <a [routerLink]="['/login']" class="text-blue-500">Logueate!</a></p>
     </form>
   </div>
 </div>
+

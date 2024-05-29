@@ -7,6 +7,9 @@
   .boton{
       @apply bg-white p-2 rounded-xl font-bold shadow-sm shadow-white transition-all duration-500 hover:bg-base hover:text-white
   }
+  .lista{
+    @apply hover:bg-gray-300 hover:text-black p-2 rounded-xl hover:font-bold transition-all duration-200 text-white
+  }
 }
 
 @keyframes slideDown {
@@ -70,30 +73,8 @@ hr {
   margin: 0;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
 
-nav ul li {
-  text-decoration: none;
-  display: inline;
-  margin-right: 50px;
-  transition: all 1s;
-}
-nav ul li:hover{
-  background-color: rgb(129, 132, 121);
- 
-  border-radius: 5px;
-  transition: all 1s;
-  color: white;
-}
-nav ul li a {
-  cursor: pointer;
-  text-decoration: none;
-  color: white
-}footer *{
+footer *{
   color: white;
 
 }
@@ -105,13 +86,7 @@ footer{
   background-color: #000;
 }
 
-.active-link {
-  transition: all 1s;
-  color: yellow;
-  font-size: 20px;
-  padding: 5px;
-  border-radius: 5px;
-}
+
 .container {
   position: relative;
   width: 100%;

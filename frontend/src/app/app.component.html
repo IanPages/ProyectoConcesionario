@@ -3,24 +3,41 @@
     <div class="left w-50/100">
       <h1 class="font-bold text-4xl" [routerLink]="['']"><a>Second-Car</a></h1>
     </div>
-    <div class="items-end justify-end flex w-50/100">
-      <button class="bg-blue-500 text-white p-2 rounded" (click)="Expandir()" *ngIf="!expandido">  Expandir</button>
-      <button class="bg-red-500 text-white p-2 rounded" (click)="Cerrar()" *ngIf="expandido"><img src="" alt=""> Cerrar</button>
+    <div class="flex items-end justify-end  w-50/100 ">
+      <button  class="text-white  font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50"
+style="fill:#FFFFFF;">
+<path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"></path>
+</svg>
+        </button>
+      <!-- <button class="bg-blue-500 text-white p-2 rounded" (click)="Expandir()" *ngIf="!expandido">  Expandir</button>
+      <button class="bg-red-500 text-white p-2 rounded" (click)="Cerrar()" *ngIf="expandido"><img src="" alt=""> Cerrar</button> -->
     </div>
   </div>
 </header>
 
-<nav class="w-full bg-gray-800 text-white transition-all duration-500 ease-in-out" [class.hidden]="!expandido" [@slideDown]="expandido">
-  <ul class="flex flex-col items-center space-y-4 py-3 px-3">
-    <li [routerLink]="['']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"><a (click)="ClickLink()">Home</a></li>
-    <li [routerLink]="['/about']" routerLinkActive="active-link"><a (click)="ClickLink()">Sobre Nosotros</a></li>
-    <li [routerLink]="['/coches']" routerLinkActive="active-link"><a (click)="ClickLink()">Coches</a></li>
-    <li [routerLink]="['/contacto']" routerLinkActive="active-link"><a (click)="ClickLink()">Contacto</a></li>
-    <li routerLinkActive="active-link" *ngIf="isLoggedIn()"><a (click)="logout()">Logout</a></li>
-    <li [routerLink]="['/login']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a (click)="ClickLink()">Login</a></li>
-    <li [routerLink]="['/signup']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a (click)="ClickLink()">Register</a></li>
+<div  id="drawer-navigation" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-gray-800 w-64 dark:bg-gray-800" tabindex="-1" aria-labelledby="drawer-navigation-label">
+  <h5 id="drawer-navigation-label" class="text-base font-semibold text-white uppercase dark:text-gray-400">Menu</h5>
+  <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+    <svg class="mt-3 w-4 h-4 bg-white rounded-xl" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+    </svg>
+    
+    <span class="sr-only">Close menu</span>
+ </button>
+<div class="py-4 overflow-y-auto">
+  <ul class="flex flex-col items-center space-y-6 py-5 px-3 cursor-pointer ">
+    <li data-drawer-hide="drawer-navigation" class="lista" [routerLink]="['']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"><a >Home</a></li>
+    <li data-drawer-hide="drawer-navigation" class="lista" [routerLink]="['/about']" routerLinkActive="active-link"><a >Sobre Nosotros</a></li>
+    <li data-drawer-hide="drawer-navigation" class="lista" [routerLink]="['/coches']" routerLinkActive="active-link"><a >Coches</a></li>
+    <li data-drawer-hide="drawer-navigation" class="lista" [routerLink]="['/contacto']" routerLinkActive="active-link"><a >Contacto</a></li>
+    <li data-drawer-hide="drawer-navigation" class="lista" routerLinkActive="active-link" *ngIf="isLoggedIn()"><a (click)="logout()">Logout</a></li>
+    <li data-drawer-hide="drawer-navigation" class="lista" [routerLink]="['/login']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a >Login</a></li>
+    <li data-drawer-hide="drawer-navigation" class="lista" [routerLink]="['/signup']" routerLinkActive="active-link" *ngIf="!isLoggedIn()"><a >Register</a></li>
   </ul>
-</nav>
+ </div>
+</div>
+
 
 
 
